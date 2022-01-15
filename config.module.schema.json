@@ -1,0 +1,1059 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "examples": [
+    [
+      {
+        "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
+        "TestingModuleStatus": 2,
+        "TestingModule": "Zone2",
+        "TestingStep": 0,
+        "Result": 2,
+        "Progress": 0,
+        "Name": "ZONE2",
+        "TestingOptions": [
+          "Audio"
+        ],
+        "IsRetest": false,
+        "Order": 9,
+        "IsEnable": true,
+        "DetailResults": [
+          {
+            "Label": "SurroundBack-Left",
+            "Key": "SurroundBackLeft",
+            "IsHasChild": true,
+            "DetailResults": [
+              {
+                "Label": "Tần số",
+                "Key": "Frequency",
+                "Unit": "Hz"
+              },
+              {
+                "Label": "Biên độ",
+                "Key": "Amplitude",
+                "Unit": "V"
+              },
+              {
+                "Label": "Thd",
+                "Key": "Thd",
+                "Unit": "%"
+              }
+            ]
+          },
+          {
+            "Label": "SurroundBack-Right",
+            "Key": "SurroundBackRight",
+            "IsHasChild": true,
+            "DetailResults": [
+              {
+                "Label": "Tần số",
+                "Key": "Frequency",
+                "Unit": "Hz"
+              },
+              {
+                "Label": "Biên độ",
+                "Key": "Amplitude",
+                "Unit": "V"
+              },
+              {
+                "Label": "Thd",
+                "Key": "Thd",
+                "Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
+        "TestingModuleStatus": 2,
+        "TestingModule": "HdmiCblSat",
+        "TestingStep": 0,
+        "Result": 2,
+        "Progress": 0,
+        "Name": "HDMI-CBL/SAT",
+        "TestingOptions": [
+          "Audio",
+          "Video"
+        ],
+        "VideoOutputs": [
+          "HdmiOut1"
+        ],
+        "IsRetest": false,
+        "Order": 1,
+        "IsEnable": true,
+        "DetailResults": [
+          {
+            "Label": "Front-Left",
+            "Key": "FrontLeft",
+            "IsHasChild": true,
+            "DetailResults": [
+              {
+                "Label": "Tần số",
+                "Key": "Frequency",
+                "Unit": "Hz"
+              },
+              {
+                "Label": "Biên độ",
+                "Key": "Amplitude",
+                "Unit": "V"
+              },
+              {
+                "Label": "Thd",
+                "Key": "Thd",
+                "Unit": "%"
+              }
+            ]
+          },
+          {
+            "Label": "Front-Right",
+            "Key": "FrontRight",
+            "IsHasChild": true,
+            "DetailResults": [
+              {
+                "Label": "Tần số",
+                "Key": "Frequency",
+                "Unit": "Hz"
+              },
+              {
+                "Label": "Biên độ",
+                "Key": "Amplitude",
+                "Unit": "V"
+              },
+              {
+                "Label": "Thd",
+                "Key": "Thd",
+                "Unit": "%"
+              }
+            ]
+          },
+          {
+            "Label": "HdmiOut1",
+            "Key": "HdmiOut1",
+            "IsHasChild": true,
+            "DetailResults": [
+              {
+                "Label": "Diff",
+                "Key": "DifferentPercent"
+              },
+              {
+                "Label": "Size",
+                "Key": "Size"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
+            "TestingModuleStatus": 2,
+            "TestingModule": "Zone2",
+            "TestingStep": 0,
+            "Result": 2,
+            "Progress": 0,
+            "Name": "ZONE2",
+            "TestingOptions": [
+              "Audio"
+            ],
+            "IsRetest": false,
+            "Order": 9,
+            "IsEnable": true,
+            "DetailResults": [
+              {
+                "Label": "SurroundBack-Left",
+                "Key": "SurroundBackLeft",
+                "IsHasChild": true,
+                "DetailResults": [
+                  {
+                    "Label": "Tần số",
+                    "Key": "Frequency",
+                    "Unit": "Hz"
+                  },
+                  {
+                    "Label": "Biên độ",
+                    "Key": "Amplitude",
+                    "Unit": "V"
+                  },
+                  {
+                    "Label": "Thd",
+                    "Key": "Thd",
+                    "Unit": "%"
+                  }
+                ]
+              },
+              {
+                "Label": "SurroundBack-Right",
+                "Key": "SurroundBackRight",
+                "IsHasChild": true,
+                "DetailResults": [
+                  {
+                    "Label": "Tần số",
+                    "Key": "Frequency",
+                    "Unit": "Hz"
+                  },
+                  {
+                    "Label": "Biên độ",
+                    "Key": "Amplitude",
+                    "Unit": "V"
+                  },
+                  {
+                    "Label": "Thd",
+                    "Key": "Thd",
+                    "Unit": "%"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "required": [
+          "Id",
+          "TestingModuleStatus",
+          "TestingModule",
+          "TestingStep",
+          "Result",
+          "Progress",
+          "Name",
+          "TestingOptions",
+          "IsRetest",
+          "Order",
+          "IsEnable",
+          "DetailResults"
+        ],
+        "properties": {
+          "Id": {
+            "$id": "#/items/anyOf/0/properties/Id",
+            "type": "string",
+            "title": "The Id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e"
+            ]
+          },
+          "TestingModuleStatus": {
+            "$id": "#/items/anyOf/0/properties/TestingModuleStatus",
+            "type": "integer",
+            "title": "The TestingModuleStatus schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "TestingModule": {
+            "$id": "#/items/anyOf/0/properties/TestingModule",
+            "type": "string",
+            "title": "The TestingModule schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Zone2"
+            ]
+          },
+          "TestingStep": {
+            "$id": "#/items/anyOf/0/properties/TestingStep",
+            "type": "integer",
+            "title": "The TestingStep schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Result": {
+            "$id": "#/items/anyOf/0/properties/Result",
+            "type": "integer",
+            "title": "The Result schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "Progress": {
+            "$id": "#/items/anyOf/0/properties/Progress",
+            "type": "integer",
+            "title": "The Progress schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Name": {
+            "$id": "#/items/anyOf/0/properties/Name",
+            "type": "string",
+            "title": "The Name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "ZONE2"
+            ]
+          },
+          "TestingOptions": {
+            "$id": "#/items/anyOf/0/properties/TestingOptions",
+            "type": "array",
+            "title": "The TestingOptions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                "Audio"
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/0/properties/TestingOptions/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/0/properties/TestingOptions/items/anyOf/0",
+                  "type": "string",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "Audio"
+                  ]
+                }
+              ]
+            }
+          },
+          "IsRetest": {
+            "$id": "#/items/anyOf/0/properties/IsRetest",
+            "type": "boolean",
+            "title": "The IsRetest schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "Order": {
+            "$id": "#/items/anyOf/0/properties/Order",
+            "type": "integer",
+            "title": "The Order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              9
+            ]
+          },
+          "IsEnable": {
+            "$id": "#/items/anyOf/0/properties/IsEnable",
+            "type": "boolean",
+            "title": "The IsEnable schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "DetailResults": {
+            "$id": "#/items/anyOf/0/properties/DetailResults",
+            "type": "array",
+            "title": "The DetailResults schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "Label": "SurroundBack-Left",
+                  "Key": "SurroundBackLeft",
+                  "IsHasChild": true,
+                  "DetailResults": [
+                    {
+                      "Label": "Tần số",
+                      "Key": "Frequency",
+                      "Unit": "Hz"
+                    },
+                    {
+                      "Label": "Biên độ",
+                      "Key": "Amplitude",
+                      "Unit": "V"
+                    },
+                    {
+                      "Label": "Thd",
+                      "Key": "Thd",
+                      "Unit": "%"
+                    }
+                  ]
+                },
+                {
+                  "Label": "SurroundBack-Right",
+                  "Key": "SurroundBackRight",
+                  "IsHasChild": true,
+                  "DetailResults": [
+                    {
+                      "Label": "Tần số",
+                      "Key": "Frequency",
+                      "Unit": "Hz"
+                    },
+                    {
+                      "Label": "Biên độ",
+                      "Key": "Amplitude",
+                      "Unit": "V"
+                    },
+                    {
+                      "Label": "Thd",
+                      "Key": "Thd",
+                      "Unit": "%"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/0/properties/DetailResults/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "Label": "SurroundBack-Left",
+                      "Key": "SurroundBackLeft",
+                      "IsHasChild": true,
+                      "DetailResults": [
+                        {
+                          "Label": "Tần số",
+                          "Key": "Frequency",
+                          "Unit": "Hz"
+                        },
+                        {
+                          "Label": "Biên độ",
+                          "Key": "Amplitude",
+                          "Unit": "V"
+                        },
+                        {
+                          "Label": "Thd",
+                          "Key": "Thd",
+                          "Unit": "%"
+                        }
+                      ]
+                    }
+                  ],
+                  "required": [
+                    "Label",
+                    "Key",
+                    "IsHasChild",
+                    "DetailResults"
+                  ],
+                  "properties": {
+                    "Label": {
+                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
+                      "type": "string",
+                      "title": "The Label schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "SurroundBack-Left"
+                      ]
+                    },
+                    "Key": {
+                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
+                      "type": "string",
+                      "title": "The Key schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "SurroundBackLeft"
+                      ]
+                    },
+                    "IsHasChild": {
+                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/IsHasChild",
+                      "type": "boolean",
+                      "title": "The IsHasChild schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    },
+                    "DetailResults": {
+                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults",
+                      "type": "array",
+                      "title": "The DetailResults schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": [],
+                      "examples": [
+                        [
+                          {
+                            "Label": "Tần số",
+                            "Key": "Frequency",
+                            "Unit": "Hz"
+                          },
+                          {
+                            "Label": "Biên độ",
+                            "Key": "Amplitude",
+                            "Unit": "V"
+                          }
+                        ]
+                      ],
+                      "additionalItems": true,
+                      "items": {
+                        "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items",
+                        "anyOf": [
+                          {
+                            "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0",
+                            "type": "object",
+                            "title": "The first anyOf schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                              {
+                                "Label": "Tần số",
+                                "Key": "Frequency",
+                                "Unit": "Hz"
+                              }
+                            ],
+                            "required": [
+                              "Label",
+                              "Key",
+                              "Unit"
+                            ],
+                            "properties": {
+                              "Label": {
+                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
+                                "type": "string",
+                                "title": "The Label schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Tần số"
+                                ]
+                              },
+                              "Key": {
+                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
+                                "type": "string",
+                                "title": "The Key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Frequency"
+                                ]
+                              },
+                              "Unit": {
+                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Unit",
+                                "type": "string",
+                                "title": "The Unit schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Hz"
+                                ]
+                              }
+                            },
+                            "additionalProperties": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      {
+        "$id": "#/items/anyOf/1",
+        "type": "object",
+        "title": "The second anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
+            "TestingModuleStatus": 2,
+            "TestingModule": "HdmiCblSat",
+            "TestingStep": 0,
+            "Result": 2,
+            "Progress": 0,
+            "Name": "HDMI-CBL/SAT",
+            "TestingOptions": [
+              "Audio",
+              "Video"
+            ],
+            "VideoOutputs": [
+              "HdmiOut1"
+            ],
+            "IsRetest": false,
+            "Order": 1,
+            "IsEnable": true,
+            "DetailResults": [
+              {
+                "Label": "Front-Left",
+                "Key": "FrontLeft",
+                "IsHasChild": true,
+                "DetailResults": [
+                  {
+                    "Label": "Tần số",
+                    "Key": "Frequency",
+                    "Unit": "Hz"
+                  },
+                  {
+                    "Label": "Biên độ",
+                    "Key": "Amplitude",
+                    "Unit": "V"
+                  },
+                  {
+                    "Label": "Thd",
+                    "Key": "Thd",
+                    "Unit": "%"
+                  }
+                ]
+              },
+              {
+                "Label": "Front-Right",
+                "Key": "FrontRight",
+                "IsHasChild": true,
+                "DetailResults": [
+                  {
+                    "Label": "Tần số",
+                    "Key": "Frequency",
+                    "Unit": "Hz"
+                  },
+                  {
+                    "Label": "Biên độ",
+                    "Key": "Amplitude",
+                    "Unit": "V"
+                  },
+                  {
+                    "Label": "Thd",
+                    "Key": "Thd",
+                    "Unit": "%"
+                  }
+                ]
+              },
+              {
+                "Label": "HdmiOut1",
+                "Key": "HdmiOut1",
+                "IsHasChild": true,
+                "DetailResults": [
+                  {
+                    "Label": "Diff",
+                    "Key": "DifferentPercent"
+                  },
+                  {
+                    "Label": "Size",
+                    "Key": "Size"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "required": [
+          "Id",
+          "TestingModuleStatus",
+          "TestingModule",
+          "TestingStep",
+          "Result",
+          "Progress",
+          "Name",
+          "TestingOptions",
+          "VideoOutputs",
+          "IsRetest",
+          "Order",
+          "IsEnable",
+          "DetailResults"
+        ],
+        "properties": {
+          "Id": {
+            "$id": "#/items/anyOf/1/properties/Id",
+            "type": "string",
+            "title": "The Id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e"
+            ]
+          },
+          "TestingModuleStatus": {
+            "$id": "#/items/anyOf/1/properties/TestingModuleStatus",
+            "type": "integer",
+            "title": "The TestingModuleStatus schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "TestingModule": {
+            "$id": "#/items/anyOf/1/properties/TestingModule",
+            "type": "string",
+            "title": "The TestingModule schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "HdmiCblSat"
+            ]
+          },
+          "TestingStep": {
+            "$id": "#/items/anyOf/1/properties/TestingStep",
+            "type": "integer",
+            "title": "The TestingStep schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Result": {
+            "$id": "#/items/anyOf/1/properties/Result",
+            "type": "integer",
+            "title": "The Result schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "Progress": {
+            "$id": "#/items/anyOf/1/properties/Progress",
+            "type": "integer",
+            "title": "The Progress schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Name": {
+            "$id": "#/items/anyOf/1/properties/Name",
+            "type": "string",
+            "title": "The Name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "HDMI-CBL/SAT"
+            ]
+          },
+          "TestingOptions": {
+            "$id": "#/items/anyOf/1/properties/TestingOptions",
+            "type": "array",
+            "title": "The TestingOptions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                "Audio",
+                "Video"
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/1/properties/TestingOptions/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/1/properties/TestingOptions/items/anyOf/0",
+                  "type": "string",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "Audio",
+                    "Video"
+                  ]
+                }
+              ]
+            }
+          },
+          "VideoOutputs": {
+            "$id": "#/items/anyOf/1/properties/VideoOutputs",
+            "type": "array",
+            "title": "The VideoOutputs schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                "HdmiOut1"
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/1/properties/VideoOutputs/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/1/properties/VideoOutputs/items/anyOf/0",
+                  "type": "string",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "HdmiOut1"
+                  ]
+                }
+              ]
+            }
+          },
+          "IsRetest": {
+            "$id": "#/items/anyOf/1/properties/IsRetest",
+            "type": "boolean",
+            "title": "The IsRetest schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "Order": {
+            "$id": "#/items/anyOf/1/properties/Order",
+            "type": "integer",
+            "title": "The Order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "IsEnable": {
+            "$id": "#/items/anyOf/1/properties/IsEnable",
+            "type": "boolean",
+            "title": "The IsEnable schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "DetailResults": {
+            "$id": "#/items/anyOf/1/properties/DetailResults",
+            "type": "array",
+            "title": "The DetailResults schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "Label": "Front-Left",
+                  "Key": "FrontLeft",
+                  "IsHasChild": true,
+                  "DetailResults": [
+                    {
+                      "Label": "Tần số",
+                      "Key": "Frequency",
+                      "Unit": "Hz"
+                    },
+                    {
+                      "Label": "Biên độ",
+                      "Key": "Amplitude",
+                      "Unit": "V"
+                    },
+                    {
+                      "Label": "Thd",
+                      "Key": "Thd",
+                      "Unit": "%"
+                    }
+                  ]
+                },
+                {
+                  "Label": "Front-Right",
+                  "Key": "FrontRight",
+                  "IsHasChild": true,
+                  "DetailResults": [
+                    {
+                      "Label": "Tần số",
+                      "Key": "Frequency",
+                      "Unit": "Hz"
+                    },
+                    {
+                      "Label": "Biên độ",
+                      "Key": "Amplitude",
+                      "Unit": "V"
+                    },
+                    {
+                      "Label": "Thd",
+                      "Key": "Thd",
+                      "Unit": "%"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/1/properties/DetailResults/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "Label": "Front-Left",
+                      "Key": "FrontLeft",
+                      "IsHasChild": true,
+                      "DetailResults": [
+                        {
+                          "Label": "Tần số",
+                          "Key": "Frequency",
+                          "Unit": "Hz"
+                        },
+                        {
+                          "Label": "Biên độ",
+                          "Key": "Amplitude",
+                          "Unit": "V"
+                        },
+                        {
+                          "Label": "Thd",
+                          "Key": "Thd",
+                          "Unit": "%"
+                        }
+                      ]
+                    }
+                  ],
+                  "required": [
+                    "Label",
+                    "Key",
+                    "IsHasChild",
+                    "DetailResults"
+                  ],
+                  "properties": {
+                    "Label": {
+                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/Label",
+                      "type": "string",
+                      "title": "The Label schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Front-Left"
+                      ]
+                    },
+                    "Key": {
+                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/Key",
+                      "type": "string",
+                      "title": "The Key schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "FrontLeft"
+                      ]
+                    },
+                    "IsHasChild": {
+                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/IsHasChild",
+                      "type": "boolean",
+                      "title": "The IsHasChild schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    },
+                    "DetailResults": {
+                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults",
+                      "type": "array",
+                      "title": "The DetailResults schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": [],
+                      "examples": [
+                        [
+                          {
+                            "Label": "Tần số",
+                            "Key": "Frequency",
+                            "Unit": "Hz"
+                          },
+                          {
+                            "Label": "Biên độ",
+                            "Key": "Amplitude",
+                            "Unit": "V"
+                          }
+                        ]
+                      ],
+                      "additionalItems": true,
+                      "items": {
+                        "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items",
+                        "anyOf": [
+                          {
+                            "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0",
+                            "type": "object",
+                            "title": "The first anyOf schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                              {
+                                "Label": "Tần số",
+                                "Key": "Frequency",
+                                "Unit": "Hz"
+                              }
+                            ],
+                            "required": [
+                              "Label",
+                              "Key",
+                              "Unit"
+                            ],
+                            "properties": {
+                              "Label": {
+                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
+                                "type": "string",
+                                "title": "The Label schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Tần số"
+                                ]
+                              },
+                              "Key": {
+                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
+                                "type": "string",
+                                "title": "The Key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Frequency"
+                                ]
+                              },
+                              "Unit": {
+                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Unit",
+                                "type": "string",
+                                "title": "The Unit schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                  "Hz"
+                                ]
+                              }
+                            },
+                            "additionalProperties": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

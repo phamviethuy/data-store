@@ -1,0 +1,1259 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AppSetting",
+  "definitions": {
+    "NavigationModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ProjectName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Path": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Title": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "BindableBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    },
+    "LogFileSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "SequenceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Date": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "FileName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "FilePath": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "TesseractSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Language": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Mode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "DeviceVersion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Data": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/KeyValue"
+            }
+          ]
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Index": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "KeyValue": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Key": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Value": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "TextExtractorSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Thres": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Max": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsInvert": {
+          "type": "boolean"
+        },
+        "X": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsRaw": {
+          "type": "boolean"
+        }
+      }
+    },
+    "InputScanType": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Anam",
+        "Mac",
+        "Customer",
+        "Scanner"
+      ],
+      "enum": [
+        "Anam",
+        "Mac",
+        "Customer",
+        "Scanner"
+      ]
+    },
+    "ScanMode": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Enter",
+        "Tab"
+      ],
+      "enum": [
+        "Enter",
+        "Tab"
+      ]
+    },
+    "Enable": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Off",
+        "On"
+      ],
+      "enum": [
+        "Off",
+        "On"
+      ]
+    },
+    "AvrAtsSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "SerialPortSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SerialPortSetting"
+          }
+        },
+        "AudioDaqSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioDaqSetting"
+          }
+        },
+        "AudioPlayerSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerSetting"
+          }
+        },
+        "VideoCaptureSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/VideoCaptureSetting"
+          }
+        },
+        "AudioLimitationSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioLimitationSetting"
+          }
+        },
+        "SampleImageSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SampleImageSetting"
+          }
+        },
+        "ImageOffsetSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/ImageOffsetSetting"
+          }
+        },
+        "DaqChannelSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioChannelSetting"
+          }
+        },
+        "HeosDeviceSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/HeosDeviceSetting"
+            }
+          ]
+        },
+        "WorkFlowSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/WorkFlowSetting"
+            }
+          ]
+        },
+        "DefaultStateSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/DefaultStateSetting"
+            }
+          ]
+        },
+        "AutoRetest": {
+          "type": "boolean"
+        }
+      }
+    },
+    "SerialPortSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "Device": {
+              "$ref": "#/definitions/DeviceType"
+            },
+            "Port": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Baudrate": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "EndingCharacter": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ConnectCommandContent": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ExpectedConnectCommandResult": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "DeviceType": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "BtBox",
+        "Sunmodule",
+        "Remote",
+        "DutRemote"
+      ],
+      "enum": [
+        "BtBox",
+        "Sunmodule",
+        "Remote",
+        "DutRemote"
+      ]
+    },
+    "BaseDeviceConfig": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioDaqSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "SamplingRate": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "NumberOfSample": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Value": {
+              "oneOf": [
+                {},
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "Input": {
+              "$ref": "#/definitions/AudioInput"
+            },
+            "DaqType": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "SignalOffsets": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "$ref": "#/definitions/KeyValue"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "AudioInput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ],
+      "enum": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ]
+    },
+    "AudioPlayerSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "DeviceNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioPlayerFileConfigs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerFileSetting"
+          }
+        },
+        "AudioPlayerGeneratorConfigs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerGeneratorSetting"
+          }
+        }
+      }
+    },
+    "AudioPlayerFileSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "FilePath": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput2"
+        }
+      }
+    },
+    "AudioInput2": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "AudioPlayerGeneratorSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Frequency": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "FrequencyEnd": {
+          "type": "number",
+          "format": "double"
+        },
+        "Amplitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "Type": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "SweepLength": {
+          "type": "number",
+          "format": "double"
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput2"
+        }
+      }
+    },
+    "VideoCaptureSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Width": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Height": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Output": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "VideoCaptureDeviceType": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioLimitationSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Header": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioLimmitations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioLimitation"
+          }
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput"
+        },
+        "IsEnable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "AudioLimitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "Frequency": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Amplitude": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Thd": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Channel": {
+          "$ref": "#/definitions/AudioChannel"
+        },
+        "Input": {
+          "$ref": "#/definitions/AudioInput"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "Limitation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Upper": {
+              "type": "number",
+              "format": "double"
+            },
+            "Lower": {
+              "type": "number",
+              "format": "double"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioChannel": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "FrontLeft",
+        "FrontRight",
+        "Center",
+        "SurroundLeft",
+        "SurroundRight",
+        "SurroundBackLeft",
+        "SurroundBackRight",
+        "HeadPhoneLeft",
+        "HeadPhoneRight",
+        "HeosLeft",
+        "HeosRight",
+        "Left",
+        "Right",
+        "Woofer",
+        "Height1Left",
+        "Height1Right",
+        "Height2Left",
+        "Height2Right",
+        "Zone2PreOutLeft",
+        "Zone2PreOutRight",
+        "Zone3PreOutLeft",
+        "Zone3PreOutRight"
+      ],
+      "enum": [
+        "FrontLeft",
+        "FrontRight",
+        "Center",
+        "SurroundLeft",
+        "SurroundRight",
+        "SurroundBackLeft",
+        "SurroundBackRight",
+        "HeadPhoneLeft",
+        "HeadPhoneRight",
+        "HeosLeft",
+        "HeosRight",
+        "Left",
+        "Right",
+        "Woofer",
+        "Height1Left",
+        "Height1Right",
+        "Height2Left",
+        "Height2Right",
+        "Zone2PreOutLeft",
+        "Zone2PreOutRight",
+        "Zone3PreOutLeft",
+        "Zone3PreOutRight"
+      ]
+    },
+    "SampleImageSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "FilePath": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "VideoInput": {
+              "$ref": "#/definitions/VideoInput"
+            },
+            "VideoOutput": {
+              "$ref": "#/definitions/VideoOutput"
+            }
+          }
+        }
+      ]
+    },
+    "VideoInput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi",
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Usb",
+        "Version",
+        "ComponetVideo",
+        "HdmiAux1",
+        "HdmiAux2",
+        "CvbsCblSat",
+        "CvbsMediaPlayer",
+        "HdmiCd"
+      ],
+      "enum": [
+        "Hdmi",
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Usb",
+        "Version",
+        "ComponetVideo",
+        "HdmiAux1",
+        "HdmiAux2",
+        "CvbsCblSat",
+        "CvbsMediaPlayer",
+        "HdmiCd"
+      ]
+    },
+    "VideoOutput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Version",
+        "CVBS",
+        "HdmiOut3",
+        "Monitor1"
+      ],
+      "enum": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Version",
+        "CVBS",
+        "HdmiOut3",
+        "Monitor1"
+      ]
+    },
+    "ImageOffsetSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Label": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "VideoInput": {
+          "$ref": "#/definitions/VideoInput"
+        },
+        "VideoOutput": {
+          "$ref": "#/definitions/VideoOutput"
+        },
+        "DifferentPercent": {
+          "type": "number",
+          "format": "double"
+        },
+        "Threshold": {
+          "type": "integer",
+          "format": "byte"
+        }
+      }
+    },
+    "AudioChannelSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceIds": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "format": "guid"
+              }
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "AudioChannel": {
+              "$ref": "#/definitions/AudioChannel"
+            },
+            "PhysicalName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "AssignName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ChannelIndex": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "AITerminalConfiguration": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Gain": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        }
+      ]
+    },
+    "HeosDeviceSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Ip": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "WorkFlowSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "RetryTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "RetryDelay": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "DefaultStateSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "SourceMode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AmpAssignMode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "SpeakerSelect": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/BindableBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Navigation": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/NavigationModel"
+            }
+          ]
+        },
+        "LogFile": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/LogFileSetting"
+            }
+          ]
+        },
+        "Brand": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "TesseractSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TesseractSetting"
+            }
+          ]
+        },
+        "DeviceVersions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/DeviceVersion"
+          }
+        },
+        "TextExtractorSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/TextExtractorSetting"
+          }
+        },
+        "InputScanType": {
+          "$ref": "#/definitions/InputScanType"
+        },
+        "ScanMode": {
+          "$ref": "#/definitions/ScanMode"
+        },
+        "ScanAllApp": {
+          "$ref": "#/definitions/Enable"
+        },
+        "EnableDataBase": {
+          "$ref": "#/definitions/Enable"
+        },
+        "AvrAtsSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/AvrAtsSetting"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
