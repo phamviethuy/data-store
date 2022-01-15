@@ -1,117 +1,3008 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "AppSetting",
+  "title": "WorkFlowStep",
+  "x-example": [
+    {
+      "Id": "41aa126d-ec4c-450b-821d-92a21de89ead",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "Bắt đầu test",
+          "[HDMI-CBL/SAT]Bắt đầu",
+          "[Zone2]Bắt đầu",
+          "[Zone3]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 1
+    },
+    {
+      "Id": "53194f91-2e21-462d-8f29-70e53eaf4f58",
+      "ModuleOption": {
+        "Modules": null,
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 9000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "Set Default Mode Volume"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 100,
+            "RepeatTime": 1,
+            "Code": "DefaultModeHighTier",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 1
+    },
+    {
+      "Id": "7383626f-ee87-4e40-82e2-cac86ca21e26",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HDMI-CBL/SAT] Đo tín hiệu ",
+          "[Z2] Đo tín hiệu ",
+          "[Z3] Đo tín hiệu "
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "CblSat",
+        "AmpAssignMode": null,
+        "SpeakerSelect": "FloorAndHeigh",
+        "SoundModes": [
+          {
+            "Key": "CblSat",
+            "Value": "Auto"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 3000,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 3000,
+          "SpeakerSelectOnly": 9000
+        }
+      },
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 2,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 3000,
+            "RepeatTime": 1,
+            "Code": "CblSat",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2000,
+            "RepeatTime": 1,
+            "Code": "InputModeAuto",
+            "Types": [
+              3
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 100,
+            "RepeatTime": 1,
+            "Code": "OnFloorAndHeigh",
+            "Types": [
+              4
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 1
+    },
+    {
+      "Id": "8f252800-0ac0-42a0-9b8c-122b585ff8bd",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HDMI-CBL/SAT] Phân tích tín hiệu"
+        ],
+        "SourceMode": "CblSat",
+        "AmpAssignMode": null,
+        "SpeakerSelect": "FloorAndHeigh",
+        "SoundModes": [
+          {
+            "Key": "CblSat",
+            "Value": "Auto"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 2,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiCblSat"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiCblSat",
+            "AudioInput": "HdmiCblSat",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "Module": "Zone2",
+            "AudioInput": "HdmiCblSat",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              18,
+              19
+            ]
+          },
+          {
+            "Module": "Zone3",
+            "AudioInput": "HdmiCblSat",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              20,
+              21
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 1
+    },
+    {
+      "Id": "f4e3ed39-bb5a-481c-be13-152246802761",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiCblSat",
+          "Zone2",
+          "Zone3"
+        ],
+        "Messages": [
+          "[HDMI-CBL/SAT]Hoàn thành",
+          "[Z2]Hoàn thành",
+          "[Z3]Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 1
+    },
+    {
+      "Id": "ac7c304b-b3ec-4ef4-8244-69e1b2f79ea1",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalCblSat"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "DigitalCblSat"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalCblSat]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 2
+    },
+    {
+      "Id": "a49a7824-23e9-4a4d-b2d0-f06d0edf56ed",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalCblSat"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalCblSat] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "CblSat",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "CblSat",
+            "Value": "Digital"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 3000,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 3000,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 3000,
+            "RepeatTime": 1,
+            "Code": "CblSat",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 200,
+            "RepeatTime": 1,
+            "Code": "InputModeDigital",
+            "Types": [
+              3
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 2
+    },
+    {
+      "Id": "dd863e61-0801-4b10-b129-89b150356aca",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalCblSat"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalCblSat] Đo tín hiệu"
+        ],
+        "SourceMode": "CblSat",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "CblSat",
+            "Value": "Digital"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 2
+    },
+    {
+      "Id": "58951967-8bb8-4e8a-8245-e87e2a325553",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalCblSat"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "StopAudioCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalCblSat] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "DigitalCblSat",
+            "AudioInput": "DigitalCblSat",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 2
+    },
+    {
+      "Id": "687e4dcc-e962-461d-9e93-ae5236b9c538",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalCblSat"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "DigitalCblSat"
+        ],
+        "Messages": [
+          "[DigitalCblSat] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 2
+    },
+    {
+      "Id": "f9559c02-b1fb-4d22-832d-72a1e620282e",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "Hdmi8k"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "538927f0-9302-4ab7-9d2b-460667bd4e8a",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendDutCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k] Switch to HdmiOut2"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": [
+          {
+            "ComportId": "f807d1d8-a001-4e9b-9c4c-82915bfde422",
+            "Code": "HdmiOut2",
+            "Delay": 1,
+            "PinStatus": 0,
+            "Types": null
+          }
+        ],
+        "RemoteCommands": null
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "a8b23ae0-0ba0-4868-beb9-46cc8f091c00",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendDutCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k] Chọn 8K"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "EightK",
+        "AmpAssignMode": "9.1",
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 4000,
+          "AmpAssignModeOnly": 14000,
+          "SoundModeOnly": 0,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "EightK",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "9.1_On",
+            "Types": [
+              2
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "ac07aaf6-7099-4dfc-94dd-39408462e12e",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 2000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k] Chọn Mutil channel stereo"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "MutilChannelStereo",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "2ebdf829-2546-49fe-a0a2-b5522f7858f6",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k] Đo tín hiệu"
+        ],
+        "SourceMode": "EightK",
+        "AmpAssignMode": "9.1",
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 1,
+        "VideoOutput": 1,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "90783f03-6cef-4d4b-b17d-90d520442949",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Hdmi8k] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 1,
+        "VideoOutput": 1,
+        "Modules": [
+          "Hdmi8k"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "Hdmi8k",
+            "AudioInput": "Hdmi8k",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "2b63f101-f483-43ae-b479-76a8dae0ba49",
+      "ModuleOption": {
+        "Modules": [
+          "Hdmi8k"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "Hdmi8k"
+        ],
+        "Messages": [
+          "[Hdmi8k] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 3
+    },
+    {
+      "Id": "a7b6cd32-9526-44b2-a35d-beb512d89398",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiMediaPlayer"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "b7955021-a24d-46d6-be2f-e4b7777fcfd8",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendDutCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Switch to HdmiOut3"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": [
+          {
+            "ComportId": "f807d1d8-a001-4e9b-9c4c-82915bfde422",
+            "Code": "HdmiOut3",
+            "Delay": 1,
+            "PinStatus": 0,
+            "Types": null
+          }
+        ],
+        "RemoteCommands": null
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "1bfc960e-3c27-4d4a-b639-b16028e0a982",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "MediaPlayer",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 3000,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 0,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "MediaPlayer",
+            "Types": [
+              1
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "39a19e78-9ecf-4033-a166-c853ab9f0c6a",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 6000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Chọn mutil channel stereo"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "MutilChannelStereo",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "665c583d-3eed-4577-9d28-94c12ba9173e",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": "Floor",
+        "SoundModes": [
+          {
+            "Key": "MediaPlayer",
+            "Value": "Auto"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 0,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 3000,
+          "SpeakerSelectOnly": 9000
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2000,
+            "RepeatTime": 1,
+            "Code": "InputModeAuto",
+            "Types": [
+              3
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "OnFloor",
+            "Types": [
+              4
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "d2dd7416-b5fa-45e6-8a2d-bfce4c466f5e",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Đo tín hiệu"
+        ],
+        "SourceMode": "MediaPlayer",
+        "AmpAssignMode": null,
+        "SpeakerSelect": "Floor",
+        "SoundModes": [
+          {
+            "Key": "MediaPlayer",
+            "Value": "Hdmi"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 6,
+        "VideoOutput": 4,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "54831aba-bd69-4d58-bfa8-af5f53cf5b6d",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiMediaPlayer] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 6,
+        "VideoOutput": 4,
+        "Modules": [
+          "HdmiMediaPlayer"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiMediaPlayer",
+            "AudioInput": "HdmiMediaPlayer",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "3b07a4f4-65e0-462b-85af-65f807b83445",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiMediaPlayer"
+        ],
+        "Messages": [
+          "[HdmiMediaPlayer] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 4
+    },
+    {
+      "Id": "4ad9dbfc-cc61-474a-9686-d58e977fa321",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "DigitalMediaPlayer"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalMediaPlayer]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 5
+    },
+    {
+      "Id": "77684f5e-d69b-49f7-8138-adc71fa83898",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalMediaPlayer] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "MediaPlayer",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "MediaPlayer",
+            "Value": "Digital"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 3000,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 3000,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 3000,
+            "RepeatTime": 1,
+            "Code": "MediaPlayer",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 200,
+            "RepeatTime": 1,
+            "Code": "InputModeDigital",
+            "Types": [
+              3
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 5
+    },
+    {
+      "Id": "774e5bf6-883b-4e41-b905-b6d0a81e0627",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalMediaPlayer] Đo tín hiệu"
+        ],
+        "SourceMode": "MediaPlayer",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "MediaPlayer",
+            "Value": "Digital"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 5
+    },
+    {
+      "Id": "0e822476-6671-4b16-afd3-eb0d04a5b45e",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "StopAudioCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalMediaPlayer] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "DigitalMediaPlayer",
+            "AudioInput": "DigitalMediaPlayer",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 5
+    },
+    {
+      "Id": "9dc1d5ec-6f98-4cdc-b75c-7e5835f7db19",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalMediaPlayer"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "DigitalMediaPlayer"
+        ],
+        "Messages": [
+          "[DigitalMediaPlayer] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 5
+    },
+    {
+      "Id": "4ec8ffe7-8def-4c20-8f4e-e5e8571cacbc",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiGame"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiGame]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "131b0c56-47ae-493f-a492-4700140484e2",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendDutCommand"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiGame] Switch to HdmiOut1"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": [
+          {
+            "ComportId": "f807d1d8-a001-4e9b-9c4c-82915bfde422",
+            "Code": "HdmiOut1",
+            "Delay": 1,
+            "PinStatus": 0,
+            "Types": null
+          }
+        ],
+        "RemoteCommands": null
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "f345b63a-d15e-43c2-9ab4-36c7098b4fcb",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiGame] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Game",
+            "Types": null
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "InputModeHdmi",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "6715898c-4d5d-41cd-b467-48a792815c93",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiGame] Đo tín hiệu"
+        ],
+        "SourceMode": "Game",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 5,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "ea7bb5e9-62d7-4c5b-af0f-9146194f42b1",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiGame] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 5,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiGame"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiGame",
+            "AudioInput": "HdmiGame",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "5a79b50b-88fb-4a82-8da1-29a52a97a946",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiGame"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiGame"
+        ],
+        "Messages": [
+          "[HdmiGame] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 6
+    },
+    {
+      "Id": "0c65ea4a-b352-49b9-8de8-2c401befa213",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiBluray"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiBluray"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiBluray]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "e1db7b9c-4b74-41b8-80fc-36c9a188a8fe",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiBluray"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiBluray] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Bluray",
+            "Types": null
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "InputModeHdmi",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "4fa290e6-d2cb-40a0-8b17-ded329e69e43",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiBluray"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiBluray] Đo tín hiệu"
+        ],
+        "SourceMode": "Bluray",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 4,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "90a3dce4-2d49-473d-927d-4166d344fb95",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiBluray"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiBluray] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 4,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiBluray"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiBluray",
+            "AudioInput": "HdmiBluray",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "fddb5206-741c-4b09-a736-dcad4b270659",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiBluray"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiBluray"
+        ],
+        "Messages": [
+          "[HdmiBluray] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "ea4fe737-f060-44dd-b09b-b18f52b179e1",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiAux1"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiAux1"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiAux1]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "ddb4a20d-e7c6-4cb0-b2c9-d55104043d28",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiAux1"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiAux1] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Aux",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "3a4458fe-bc89-4189-b913-48b9a05e8014",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiAux1"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiAux1] Đo tín hiệu"
+        ],
+        "SourceMode": "Aux",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 10,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "bffa2868-9fcb-4564-97bd-5ef5f00472be",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiAux1"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiAux1] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 10,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiAux1"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiAux1",
+            "AudioInput": "HdmiAux1",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "2b09ff7e-9bd1-4163-8515-0ebfc16b491f",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiAux1"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiAux1"
+        ],
+        "Messages": [
+          "[HdmiAux1] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 7
+    },
+    {
+      "Id": "49b19cdc-62c1-4e94-875c-d2e1a71d81a5",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiCd"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiCd]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "6dbb0443-ac88-40ed-8b3d-1b2f999db678",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiCd] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Cd",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "3dc093a4-0d93-498b-943b-4a39edfa03e4",
+      "ModuleOption": {
+        "Modules": null,
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 9000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "HDMI CD ON"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 100,
+            "RepeatTime": 1,
+            "Code": "HdmiCd",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "19eca58f-fabc-4515-ac72-23ef30f47ab9",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiCd] Đo tín hiệu"
+        ],
+        "SourceMode": "Cd",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 14,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "48d163ae-d452-4f64-8ba9-d36b0484df2d",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiCd] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 14,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiCd"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiCd",
+            "AudioInput": "HdmiCd",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "04005abe-1910-408b-824e-a01f43bfa726",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiCd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiCd"
+        ],
+        "Messages": [
+          "[HdmiCd] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 8
+    },
+    {
+      "Id": "a3a7577c-71ce-46c2-b702-9b7a855faf34",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "HdmiDvd"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiDvd]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 9
+    },
+    {
+      "Id": "c409d3b3-3582-4dc1-8526-c09409c69313",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiDvd] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "Dvd",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "Dvd",
+            "Value": "Auto"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 3500,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 2000,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Dvd",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "InputModeAuto",
+            "Types": [
+              3
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 9
+    },
+    {
+      "Id": "903ee087-d376-4315-a093-c6267025c308",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture",
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiDvd] Đo tín hiệu"
+        ],
+        "SourceMode": "Dvd",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "Dvd",
+            "Value": "Auto"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 3,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 9
+    },
+    {
+      "Id": "68f485e1-66c6-4a58-81e8-a06901db8982",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "AnalystVideo",
+          "StopAudioCapture",
+          "StopVideoCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[HdmiDvd] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 3,
+        "VideoOutput": 0,
+        "Modules": [
+          "HdmiDvd"
+        ]
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "HdmiDvd",
+            "AudioInput": "HdmiDvd",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 9
+    },
+    {
+      "Id": "181c3b63-7248-4d14-84a4-2a0d068baa18",
+      "ModuleOption": {
+        "Modules": [
+          "HdmiDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "HdmiDvd"
+        ],
+        "Messages": [
+          "[HdmiDvd] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 9
+    },
+    {
+      "Id": "9874a3b0-5c6c-4a1f-b056-8e4eeaabd593",
+      "ModuleOption": {
+        "Modules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[Version] Bắt đầu",
+          "[DigitalDvd] Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "f6ba1488-f69c-492c-8c30-0e2d9d71c604",
+      "ModuleOption": {
+        "Modules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Version] On DVD(optional)",
+          "[DigitalDvd] Digital Only"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": {
+        "SourceMode": "Dvd",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "Dvd",
+            "Value": "Digital"
+          }
+        ],
+        "Actions": [
+          "SendRemoteCommandWithParam"
+        ],
+        "Delay": {
+          "SourceModeOnly": 4500,
+          "AmpAssignModeOnly": 0,
+          "SoundModeOnly": 0,
+          "SpeakerSelectOnly": 0
+        }
+      },
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 2500,
+            "RepeatTime": 1,
+            "Code": "Dvd",
+            "Types": [
+              1
+            ]
+          },
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "InputModeDigital",
+            "Types": [
+              3
+            ]
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "a7c133e2-a20b-458e-8be0-bc7dd0c245b4",
+      "ModuleOption": {
+        "Modules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand",
+          "StartAudioCapture"
+        ],
+        "Delay": 2500,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Version] Hiện version",
+          "[DigitalDvd] Đo tín hiệu"
+        ],
+        "SourceMode": "Dvd",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": [
+          {
+            "Key": "Dvd",
+            "Value": "Digital"
+          }
+        ],
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 0,
+            "RepeatTime": 1,
+            "Code": "Version",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "3b8811c1-87f7-4c6b-bbe9-526d7a9e7767",
+      "ModuleOption": {
+        "Modules": [
+          "Version"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartVideoCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Version] Capture version"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 8,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "cc818eb5-cc4f-48d4-ab71-261e6b9945bd",
+      "ModuleOption": {
+        "Modules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "CheckVersion",
+          "AnalystAudio",
+          "StopVideoCapture",
+          "StopAudioCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[Version] Capture version"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": {
+        "Size": "0, 0",
+        "VideoInput": 8,
+        "VideoOutput": 0,
+        "Modules": null
+      },
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "DigitalDvd",
+            "AudioInput": "HdmiDvd",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "6e3848df-fcf7-46e8-9dc8-cab155daa1c7",
+      "ModuleOption": {
+        "Modules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "Version",
+          "DigitalDvd"
+        ],
+        "Messages": [
+          "[Version] Hoàn thành",
+          "[DigitalDvd] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 10
+    },
+    {
+      "Id": "24c9a0fa-643e-4414-a911-f8f3eec81df7",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalTV"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": [
+          "DigitalTV"
+        ],
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalTV]Bắt đầu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 11
+    },
+    {
+      "Id": "c33da499-5554-4319-943e-a95a3c9b20af",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalTV"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "SendRemoteCommand"
+        ],
+        "Delay": 4000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalTV] Chọn mode"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": {
+        "DutCommands": null,
+        "RemoteCommands": [
+          {
+            "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+            "Name": null,
+            "Delay": 200,
+            "RepeatTime": 1,
+            "Code": "TvAudio",
+            "Types": null
+          }
+        ]
+      },
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 11
+    },
+    {
+      "Id": "812ce7ca-3fbd-4049-ae47-08296abd787e",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalTV"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "StartAudioCapture"
+        ],
+        "Delay": 1000,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalTV] Đo tín hiệu"
+        ],
+        "SourceMode": "TvAudio",
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 11
+    },
+    {
+      "Id": "280454e5-7bfc-42c7-9f44-eb7de1a9de5f",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalTV"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": [
+          "AnalystAudio",
+          "StopAudioCapture"
+        ],
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": null,
+        "Messages": [
+          "[DigitalTV] Phân tích tín hiệu"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": {
+        "ModuleAudios": [
+          {
+            "Module": "DigitalTV",
+            "AudioInput": "DigitalTV",
+            "AudioOutput": "Speaker",
+            "AudioChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 11
+    },
+    {
+      "Id": "2cd842fd-9406-4b7f-9493-eba35d786217",
+      "ModuleOption": {
+        "Modules": [
+          "DigitalTV"
+        ],
+        "IsAutoNextStep": true,
+        "Actions": null,
+        "Delay": 0,
+        "BeginModules": null,
+        "CompletedModules": [
+          "DigitalTV"
+        ],
+        "Messages": [
+          "[DigitalTV] Hoàn thành"
+        ],
+        "SourceMode": null,
+        "AmpAssignMode": null,
+        "SpeakerSelect": null,
+        "SoundModes": null,
+        "ShipOnReTest": false
+      },
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": false,
+      "Order": 11
+    },
+    {
+      "Id": "edf5f96d-18d8-4272-aca2-7b6d4465412e",
+      "ModuleOption": null,
+      "PreConditionOption": null,
+      "VideoOption": null,
+      "AudioOption": null,
+      "ComportOption": null,
+      "BluetoothOption": null,
+      "IsCompleteFlow": true,
+      "Order": 999
+    }
+  ],
   "definitions": {
-    "NavigationModel": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "ProjectName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Path": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Title": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "BindableBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    },
-    "LogFileSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "SequenceNumber": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Date": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "FileName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "FilePath": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "TesseractSetting": {
+    "ModuleOption": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "Language": {
+        "Modules": {
           "type": [
-            "null",
-            "string"
-          ]
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
         },
-        "Mode": {
+        "IsAutoNextStep": {
+          "type": "boolean"
+        },
+        "Actions": {
           "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
-    },
-    "DeviceVersion": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Data": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/KeyValue"
-            }
-          ]
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
         },
-        "Name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "Index": {
+        "Delay": {
           "type": "integer",
           "format": "int32"
+        },
+        "BeginModules": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "CompletedModules": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "Messages": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "SourceMode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AmpAssignMode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "SpeakerSelect": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "SoundModes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/KeyValue"
+          }
+        },
+        "ShipOnReTest": {
+          "type": "boolean"
         }
       }
     },
@@ -140,336 +3031,208 @@
         }
       ]
     },
-    "TextExtractorSetting": {
+    "BindableBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    },
+    "PreConditionOption": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "Thres": {
-          "type": "integer",
-          "format": "int32"
+        "SourceMode": {
+          "type": [
+            "null",
+            "string"
+          ]
         },
-        "Max": {
-          "type": "integer",
-          "format": "int32"
+        "AmpAssignMode": {
+          "type": [
+            "null",
+            "string"
+          ]
         },
-        "IsInvert": {
-          "type": "boolean"
+        "SpeakerSelect": {
+          "type": [
+            "null",
+            "string"
+          ]
         },
-        "X": {
-          "type": "integer",
-          "format": "int32"
+        "SoundModes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/KeyValue"
+          }
         },
-        "Y": {
-          "type": "integer",
-          "format": "int32"
+        "Actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
         },
-        "Width": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "Height": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "IsRaw": {
-          "type": "boolean"
+        "Delay": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/DelayOption"
+            }
+          ]
         }
       }
     },
-    "InputScanType": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "Anam",
-        "Mac",
-        "Customer",
-        "Scanner"
-      ],
-      "enum": [
-        "Anam",
-        "Mac",
-        "Customer",
-        "Scanner"
-      ]
-    },
-    "ScanMode": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "Enter",
-        "Tab"
-      ],
-      "enum": [
-        "Enter",
-        "Tab"
-      ]
-    },
-    "Enable": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "Off",
-        "On"
-      ],
-      "enum": [
-        "Off",
-        "On"
-      ]
-    },
-    "AvrAtsSetting": {
+    "DelayOption": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "SerialPortSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/SerialPortSetting"
-          }
+        "SourceModeOnly": {
+          "type": "integer",
+          "format": "int32"
         },
-        "AudioDaqSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioDaqSetting"
-          }
+        "AmpAssignModeOnly": {
+          "type": "integer",
+          "format": "int32"
         },
-        "AudioPlayerSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioPlayerSetting"
-          }
+        "SoundModeOnly": {
+          "type": "integer",
+          "format": "int32"
         },
-        "VideoCaptureSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/VideoCaptureSetting"
-          }
-        },
-        "AudioLimitationSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioLimitationSetting"
-          }
-        },
-        "SampleImageSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/SampleImageSetting"
-          }
-        },
-        "ImageOffsetSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/ImageOffsetSetting"
-          }
-        },
-        "DaqChannelSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioChannelSetting"
-          }
-        },
-        "HeosDeviceSetting": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/HeosDeviceSetting"
-            }
-          ]
-        },
-        "WorkFlowSetting": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/WorkFlowSetting"
-            }
-          ]
-        },
-        "DefaultStateSetting": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/DefaultStateSetting"
-            }
-          ]
-        },
-        "AutoRetest": {
-          "type": "boolean"
+        "SpeakerSelectOnly": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     },
-    "SerialPortSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BaseDeviceConfig"
+    "VideoOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Size": {
+          "type": "string"
         },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Id": {
-              "type": "string",
-              "format": "guid"
-            },
-            "Device": {
-              "$ref": "#/definitions/DeviceType"
-            },
-            "Port": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Baudrate": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "EndingCharacter": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ConnectCommandContent": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ExpectedConnectCommandResult": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
+        "VideoInput": {
+          "$ref": "#/definitions/VideoInput"
+        },
+        "VideoOutput": {
+          "$ref": "#/definitions/VideoOutput"
+        },
+        "Modules": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
           }
         }
-      ]
+      }
     },
-    "DeviceType": {
-      "type": "string",
+    "VideoInput": {
+      "type": "integer",
       "description": "",
       "x-enumNames": [
-        "BtBox",
-        "Sunmodule",
-        "Remote",
-        "DutRemote"
+        "Hdmi",
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Usb",
+        "Version",
+        "ComponetVideo",
+        "HdmiAux1",
+        "HdmiAux2",
+        "CvbsCblSat",
+        "CvbsMediaPlayer",
+        "HdmiCd"
       ],
       "enum": [
-        "BtBox",
-        "Sunmodule",
-        "Remote",
-        "DutRemote"
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
       ]
     },
-    "BaseDeviceConfig": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Name": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
+    "VideoOutput": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Version",
+        "CVBS",
+        "HdmiOut3",
+        "Monitor1"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
       ]
     },
-    "AudioDaqSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BaseDeviceConfig"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Id": {
-              "type": "string",
-              "format": "guid"
-            },
-            "DeviceNumber": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Label": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "SamplingRate": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "NumberOfSample": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Value": {
-              "oneOf": [
-                {},
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "Input": {
-              "$ref": "#/definitions/AudioInput"
-            },
-            "DaqType": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "SignalOffsets": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "$ref": "#/definitions/KeyValue"
-              }
-            }
+    "AudioOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ModuleAudios": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/ModuleAudio"
           }
         }
-      ]
+      }
+    },
+    "ModuleAudio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Module": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput"
+        },
+        "AudioOutput": {
+          "$ref": "#/definitions/AudioOutput"
+        },
+        "AudioChannels": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioChannel"
+          }
+        }
+      }
     },
     "AudioInput": {
       "type": "string",
@@ -543,95 +3306,52 @@
         "HdmiCd"
       ]
     },
-    "AudioPlayerSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Id": {
-          "type": "string",
-          "format": "guid"
-        },
-        "DeviceNumber": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "Name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "AudioPlayerFileConfigs": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioPlayerFileSetting"
-          }
-        },
-        "AudioPlayerGeneratorConfigs": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/AudioPlayerGeneratorSetting"
-          }
-        }
-      }
+    "AudioOutput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Optical",
+        "Aux",
+        "Speaker",
+        "None"
+      ],
+      "enum": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Optical",
+        "Aux",
+        "Speaker",
+        "None"
+      ]
     },
-    "AudioPlayerFileSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "FilePath": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "AudioInput": {
-          "$ref": "#/definitions/AudioInput2"
-        }
-      }
-    },
-    "AudioInput2": {
+    "AudioChannel": {
       "type": "integer",
       "description": "",
       "x-enumNames": [
-        "Hdmi8k",
-        "HdmiCblSat",
-        "HdmiDvd",
-        "HdmiBluray",
-        "HdmiGame",
-        "HdmiMediaPlayer",
-        "Arc",
-        "AnalogPhono",
-        "AnalogCblSat",
-        "AnalogDvd",
-        "AnalogAux",
-        "AnalogCd",
-        "DigitalTV",
-        "DigitalGame",
-        "DigitalCblSat",
-        "DigitalDvd",
-        "DigitalMediaPlayer",
-        "Aux",
-        "Optical",
-        "Phono",
-        "Microphone",
-        "Zone2",
-        "Hdmi",
-        "Tone",
-        "Usb",
-        "HeadPhone",
-        "Bluetooth",
-        "Heos",
-        "None",
-        "HdmiAux1",
-        "HdmiAux2",
-        "HdmiCd"
+        "FrontLeft",
+        "FrontRight",
+        "Center",
+        "SurroundLeft",
+        "SurroundRight",
+        "SurroundBackLeft",
+        "SurroundBackRight",
+        "HeadPhoneLeft",
+        "HeadPhoneRight",
+        "HeosLeft",
+        "HeosRight",
+        "Left",
+        "Right",
+        "Woofer",
+        "Height1Left",
+        "Height1Right",
+        "Height2Left",
+        "Height2Right",
+        "Zone2PreOutLeft",
+        "Zone2PreOutRight",
+        "Zone3PreOutLeft",
+        "Zone3PreOutRight"
       ],
       "enum": [
         0,
@@ -655,516 +3375,129 @@
         18,
         19,
         20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        21
       ]
     },
-    "AudioPlayerGeneratorSetting": {
+    "ComportOption": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "Frequency": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "FrequencyEnd": {
-          "type": "number",
-          "format": "double"
-        },
-        "Amplitude": {
-          "type": "number",
-          "format": "double"
-        },
-        "Type": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "SweepLength": {
-          "type": "number",
-          "format": "double"
-        },
-        "AudioInput": {
-          "$ref": "#/definitions/AudioInput2"
-        }
-      }
-    },
-    "VideoCaptureSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BaseDeviceConfig"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Id": {
-              "type": "string",
-              "format": "guid"
-            },
-            "DeviceNumber": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Label": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Width": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Height": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Output": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "VideoCaptureDeviceType": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "AudioLimitationSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Header": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "AudioLimmitations": {
+        "DutCommands": {
           "type": [
             "array",
             "null"
           ],
           "items": {
-            "$ref": "#/definitions/AudioLimitation"
+            "$ref": "#/definitions/DutCommand"
           }
         },
-        "AudioInput": {
-          "$ref": "#/definitions/AudioInput"
+        "RemoteCommands": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/RemoteCommand"
+          }
+        }
+      }
+    },
+    "DutCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ComportId": {
+          "type": "string",
+          "format": "guid"
         },
-        "IsEnable": {
+        "Code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Delay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "PinStatus": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Types": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/OptionSourceType"
+          }
+        }
+      }
+    },
+    "OptionSourceType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Normal",
+        "SourceMode",
+        "AmpAssign",
+        "SoundMode",
+        "SpeakerSelect"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "RemoteCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Delay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "RepeatTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Types": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/OptionSourceType"
+          }
+        }
+      }
+    },
+    "BluetoothOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "IsScanMode": {
           "type": "boolean"
-        }
-      }
-    },
-    "AudioLimitation": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Id": {
-          "type": "string",
-          "format": "guid"
-        },
-        "Frequency": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/Limitation"
-            }
-          ]
-        },
-        "Amplitude": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/Limitation"
-            }
-          ]
-        },
-        "Thd": {
-          "oneOf": [
-            {
-              "type": "null"
-            },
-            {
-              "$ref": "#/definitions/Limitation"
-            }
-          ]
-        },
-        "Channel": {
-          "$ref": "#/definitions/AudioChannel"
-        },
-        "Input": {
-          "$ref": "#/definitions/AudioInput"
-        },
-        "Name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
-    },
-    "Limitation": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Upper": {
-              "type": "number",
-              "format": "double"
-            },
-            "Lower": {
-              "type": "number",
-              "format": "double"
-            },
-            "Label": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "AudioChannel": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "FrontLeft",
-        "FrontRight",
-        "Center",
-        "SurroundLeft",
-        "SurroundRight",
-        "SurroundBackLeft",
-        "SurroundBackRight",
-        "HeadPhoneLeft",
-        "HeadPhoneRight",
-        "HeosLeft",
-        "HeosRight",
-        "Left",
-        "Right",
-        "Woofer",
-        "Height1Left",
-        "Height1Right",
-        "Height2Left",
-        "Height2Right",
-        "Zone2PreOutLeft",
-        "Zone2PreOutRight",
-        "Zone3PreOutLeft",
-        "Zone3PreOutRight"
-      ],
-      "enum": [
-        "FrontLeft",
-        "FrontRight",
-        "Center",
-        "SurroundLeft",
-        "SurroundRight",
-        "SurroundBackLeft",
-        "SurroundBackRight",
-        "HeadPhoneLeft",
-        "HeadPhoneRight",
-        "HeosLeft",
-        "HeosRight",
-        "Left",
-        "Right",
-        "Woofer",
-        "Height1Left",
-        "Height1Right",
-        "Height2Left",
-        "Height2Right",
-        "Zone2PreOutLeft",
-        "Zone2PreOutRight",
-        "Zone3PreOutLeft",
-        "Zone3PreOutRight"
-      ]
-    },
-    "SampleImageSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Id": {
-              "type": "string",
-              "format": "guid"
-            },
-            "FilePath": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Name": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Label": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "VideoInput": {
-              "$ref": "#/definitions/VideoInput"
-            },
-            "VideoOutput": {
-              "$ref": "#/definitions/VideoOutput"
-            }
-          }
-        }
-      ]
-    },
-    "VideoInput": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "Hdmi",
-        "Hdmi8k",
-        "HdmiCblSat",
-        "HdmiDvd",
-        "HdmiBluray",
-        "HdmiGame",
-        "HdmiMediaPlayer",
-        "Usb",
-        "Version",
-        "ComponetVideo",
-        "HdmiAux1",
-        "HdmiAux2",
-        "CvbsCblSat",
-        "CvbsMediaPlayer",
-        "HdmiCd"
-      ],
-      "enum": [
-        "Hdmi",
-        "Hdmi8k",
-        "HdmiCblSat",
-        "HdmiDvd",
-        "HdmiBluray",
-        "HdmiGame",
-        "HdmiMediaPlayer",
-        "Usb",
-        "Version",
-        "ComponetVideo",
-        "HdmiAux1",
-        "HdmiAux2",
-        "CvbsCblSat",
-        "CvbsMediaPlayer",
-        "HdmiCd"
-      ]
-    },
-    "VideoOutput": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "HdmiOut1",
-        "HdmiOut2",
-        "Version",
-        "CVBS",
-        "HdmiOut3",
-        "Monitor1"
-      ],
-      "enum": [
-        "HdmiOut1",
-        "HdmiOut2",
-        "Version",
-        "CVBS",
-        "HdmiOut3",
-        "Monitor1"
-      ]
-    },
-    "ImageOffsetSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Id": {
-          "type": "string",
-          "format": "guid"
-        },
-        "Name": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "Label": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "VideoInput": {
-          "$ref": "#/definitions/VideoInput"
-        },
-        "VideoOutput": {
-          "$ref": "#/definitions/VideoOutput"
-        },
-        "DifferentPercent": {
-          "type": "number",
-          "format": "double"
-        },
-        "Threshold": {
-          "type": "integer",
-          "format": "byte"
-        }
-      }
-    },
-    "AudioChannelSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Id": {
-              "type": "string",
-              "format": "guid"
-            },
-            "DeviceIds": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": "string",
-                "format": "guid"
-              }
-            },
-            "Name": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "AudioChannel": {
-              "$ref": "#/definitions/AudioChannel"
-            },
-            "PhysicalName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "AssignName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ChannelIndex": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "AITerminalConfiguration": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Gain": {
-              "type": "number",
-              "format": "double"
-            }
-          }
-        }
-      ]
-    },
-    "HeosDeviceSetting": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BindableBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "Ip": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Id": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "Name": {
-              "type": [
-                "null",
-                "string"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "WorkFlowSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "RetryTime": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "RetryDelay": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "DefaultStateSetting": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "SourceMode": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "AmpAssignMode": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "SpeakerSelect": {
-          "type": [
-            "null",
-            "string"
-          ]
         }
       }
     }
@@ -1177,81 +3510,76 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "Navigation": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "ModuleOption": {
           "oneOf": [
             {
               "type": "null"
             },
             {
-              "$ref": "#/definitions/NavigationModel"
+              "$ref": "#/definitions/ModuleOption"
             }
           ]
         },
-        "LogFile": {
+        "PreConditionOption": {
           "oneOf": [
             {
               "type": "null"
             },
             {
-              "$ref": "#/definitions/LogFileSetting"
+              "$ref": "#/definitions/PreConditionOption"
             }
           ]
         },
-        "Brand": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "TesseractSetting": {
+        "VideoOption": {
           "oneOf": [
             {
               "type": "null"
             },
             {
-              "$ref": "#/definitions/TesseractSetting"
+              "$ref": "#/definitions/VideoOption"
             }
           ]
         },
-        "DeviceVersions": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/DeviceVersion"
-          }
-        },
-        "TextExtractorSettings": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "$ref": "#/definitions/TextExtractorSetting"
-          }
-        },
-        "InputScanType": {
-          "$ref": "#/definitions/InputScanType"
-        },
-        "ScanMode": {
-          "$ref": "#/definitions/ScanMode"
-        },
-        "ScanAllApp": {
-          "$ref": "#/definitions/Enable"
-        },
-        "EnableDataBase": {
-          "$ref": "#/definitions/Enable"
-        },
-        "AvrAtsSetting": {
+        "AudioOption": {
           "oneOf": [
             {
               "type": "null"
             },
             {
-              "$ref": "#/definitions/AvrAtsSetting"
+              "$ref": "#/definitions/AudioOption"
             }
           ]
+        },
+        "ComportOption": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/ComportOption"
+            }
+          ]
+        },
+        "BluetoothOption": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/BluetoothOption"
+            }
+          ]
+        },
+        "IsCompleteFlow": {
+          "type": "boolean"
+        },
+        "Order": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     }
