@@ -1,0 +1,5392 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AppSetting",
+  "x-example": {
+    "Navigation": {
+      "ProjectName": "AVR ATS-HDMI",
+      "Path": "AvrAtsShell",
+      "Title": "AVR FCT FOR MARANTZ 4700-E2"
+    },
+    "LogFile": {
+      "SequenceNumber": 0,
+      "Date": "0001-01-01T00:00:00",
+      "FileName": "AVR_ATS_4700_E2_",
+      "FilePath": ""
+    },
+    "Brand": "2",
+    "TesseractSetting": null,
+    "DeviceVersions": [
+      {
+        "Data": {
+          "Key": "Package",
+          "Value": "0000"
+        },
+        "Name": "Package",
+        "Index": 1
+      },
+      {
+        "Data": {
+          "Key": "Main",
+          "Value": "0202011270146"
+        },
+        "Name": "Main",
+        "Index": 2
+      },
+      {
+        "Data": {
+          "Key": "Main FBL",
+          "Value": "00.14"
+        },
+        "Name": "Main FBL",
+        "Index": 3
+      },
+      {
+        "Data": {
+          "Key": "DSP1",
+          "Value": "31.10"
+        },
+        "Name": "DSP1",
+        "Index": 4
+      },
+      {
+        "Data": {
+          "Key": "DSP2",
+          "Value": "32.06"
+        },
+        "Name": "DSP2",
+        "Index": 5
+      },
+      {
+        "Data": {
+          "Key": "A.PLD",
+          "Value": "00140003"
+        },
+        "Name": "A.PLD",
+        "Index": 6
+      },
+      {
+        "Data": {
+          "Key": "V.PLD",
+          "Value": "10060001"
+        },
+        "Name": "V.PLD",
+        "Index": 7
+      },
+      {
+        "Data": {
+          "Key": "GUI",
+          "Value": "82200017"
+        },
+        "Name": "GUI",
+        "Index": 8
+      },
+      {
+        "Data": {
+          "Key": "RSTR",
+          "Value": "000022704567"
+        },
+        "Name": "RSTR",
+        "Index": 9
+      },
+      {
+        "Data": {
+          "Key": "HEOS Version",
+          "Value": "1.583.161"
+        },
+        "Name": "HEOS Version",
+        "Index": 11
+      },
+      {
+        "Data": {
+          "Key": "HEOS Build",
+          "Value": "165840"
+        },
+        "Name": "HEOS Build",
+        "Index": 12
+      },
+      {
+        "Data": {
+          "Key": "HEOS Module",
+          "Value": "5"
+        },
+        "Name": "HEOS Module",
+        "Index": 13
+      },
+      {
+        "Data": {
+          "Key": "HEOS Config",
+          "Value": "Production"
+        },
+        "Name": "HEOS Config",
+        "Index": 14
+      },
+      {
+        "Data": {
+          "Key": "HEOS Locale",
+          "Value": "EU"
+        },
+        "Name": "HEOS Locale",
+        "Index": 15
+      },
+      {
+        "Data": {
+          "Key": "Audyssey I/F",
+          "Value": "00.08"
+        },
+        "Name": "Audyssey I/F",
+        "Index": 19
+      }
+    ],
+    "TextExtractorSettings": [
+      {
+        "Thres": 101,
+        "Max": 160,
+        "IsInvert": true,
+        "X": 0,
+        "Y": 0,
+        "Width": 840,
+        "Height": 1080,
+        "IsRaw": false
+      },
+      {
+        "Thres": 60,
+        "Max": 255,
+        "IsInvert": true,
+        "X": 840,
+        "Y": 0,
+        "Width": 1000,
+        "Height": 1080,
+        "IsRaw": false
+      }
+    ],
+    "InputScanType": "Mac",
+    "ScanMode": "Enter",
+    "ScanAllApp": "On",
+    "EnableDataBase": "Off",
+    "AvrAtsSetting": {
+      "SerialPortSettings": [
+        {
+          "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde421",
+          "Device": "Remote",
+          "Port": "COM4",
+          "Baudrate": 250000,
+          "EndingCharacter": "",
+          "ConnectCommandContent": "999;;;",
+          "ExpectedConnectCommandResult": "AMPROC REMOTE CONNECTED",
+          "Name": "REMOTE"
+        },
+        {
+          "Id": "f807d1d8-a001-4e9b-9c4c-82915bfde422",
+          "Device": "DutRemote",
+          "Port": "COM5",
+          "Baudrate": 250000,
+          "EndingCharacter": "",
+          "ConnectCommandContent": "999;;",
+          "ExpectedConnectCommandResult": "START",
+          "Name": "PCB CONTROLLER"
+        }
+      ],
+      "AudioDaqSettings": [
+        {
+          "Id": "da61f408-8892-4f55-98fa-b7a79ef6615c",
+          "DeviceNumber": 0,
+          "Label": "DAQ",
+          "SamplingRate": 10240,
+          "NumberOfSample": 1024,
+          "Value": null,
+          "Input": "Hdmi8k",
+          "DaqType": "Ni",
+          "SignalOffsets": [
+            {
+              "Key": "SR7706-E2",
+              "Value": "2"
+            },
+            {
+              "Key": "Default",
+              "Value": "40"
+            }
+          ],
+          "Name": "Setting DAQ"
+        }
+      ],
+      "AudioPlayerSettings": [
+        {
+          "Id": "a472801f-0ef0-486f-9f82-288fd8987aca",
+          "DeviceNumber": 0,
+          "Name": "",
+          "AudioPlayerFileConfigs": [
+            {
+              "FilePath": "Resources/Audio/800Hz.wav",
+              "AudioInput": 0
+            },
+            {
+              "FilePath": "Resources/Audio/800Hz0.5.wav",
+              "AudioInput": 13
+            },
+            {
+              "FilePath": "Resources/Audio/800Hz0.5.wav",
+              "AudioInput": 16
+            },
+            {
+              "FilePath": "Resources/Audio/800Hz1.wav",
+              "AudioInput": 11
+            }
+          ],
+          "AudioPlayerGeneratorConfigs": [
+            {
+              "Frequency": 200,
+              "FrequencyEnd": 200.0,
+              "Amplitude": 1.0,
+              "Type": "Sin",
+              "SweepLength": 5.0,
+              "AudioInput": 0
+            },
+            {
+              "Frequency": 200,
+              "FrequencyEnd": 200.0,
+              "Amplitude": 1.0,
+              "Type": "Sin",
+              "SweepLength": 5.0,
+              "AudioInput": 0
+            }
+          ]
+        }
+      ],
+      "VideoCaptureSettings": [
+        {
+          "Id": "bb0929be-1791-4153-a22f-6836a221dc20",
+          "DeviceNumber": 0,
+          "Label": "Video Capture",
+          "Width": 1920,
+          "Height": 1080,
+          "Output": "HdmiOut1",
+          "VideoCaptureDeviceType": "VideoCapture",
+          "Name": "Game Capture 4K60 Pro"
+        }
+      ],
+      "AudioLimitationSettings": [
+        {
+          "Header": "USB",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 30.0,
+                "Lower": 20.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 2.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "Usb",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 30.0,
+                "Lower": 20.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 2.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "Usb",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "Usb",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "Usb",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "Usb",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "Usb",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "Usb",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "Usb",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI 8K",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "Hdmi8k",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "Hdmi8k",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "Hdmi8k",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "Hdmi8k",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "Hdmi8k",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "Hdmi8k",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "Hdmi8k",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "Hdmi8k",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI CBL/SAT",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiCblSat",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiCblSat",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiCblSat",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Amplitude"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Frequency"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiCblSat",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiCblSat",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiCblSat",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiCblSat",
+              "Name": "SURROUNDBACK RIGHT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 3.0,
+                "Lower": 1.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Zone2PreOutLeft",
+              "Input": "HdmiCblSat",
+              "Name": "ZONE2 PREOUT LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 3.0,
+                "Lower": 1.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Zone2PreOutRight",
+              "Input": "HdmiCblSat",
+              "Name": "ZONE2 PREOUT RIGHT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 3.0,
+                "Lower": 1.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Zone3PreOutLeft",
+              "Input": "HdmiCblSat",
+              "Name": "ZONE3 PREOUT LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 3.0,
+                "Lower": 1.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Zone3PreOutRight",
+              "Input": "HdmiCblSat",
+              "Name": "ZONE3 PREOUT RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiCblSat",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI DVD",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiDvd",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiDvd",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiDvd",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiDvd",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiDvd",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiDvd",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiDvd",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiDvd",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI Game",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiGame",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiGame",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiGame",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiGame",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiGame",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiGame",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiGame",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiGame",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI BLURAY",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiBluray",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiBluray",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiBluray",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiBluray",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiBluray",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiBluray",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiBluray",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiBluray",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI MEDIA PLAYER",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiMediaPlayer",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiMediaPlayer",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiMediaPlayer",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiMediaPlayer",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiMediaPlayer",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiMediaPlayer",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiMediaPlayer",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiMediaPlayer",
+          "IsEnable": false
+        },
+        {
+          "Header": "ANALOG PHONO",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "AnalogPhono",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "AnalogPhono",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "AnalogPhono",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "AnalogPhono",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "AnalogPhono",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "AnalogPhono",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "AnalogPhono",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "AnalogPhono",
+          "IsEnable": false
+        },
+        {
+          "Header": "ANALOG CBL/SAT",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "AnalogCblSat",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "AnalogCblSat",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "AnalogCblSat",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "AnalogCblSat",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "AnalogCblSat",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "AnalogCblSat",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "AnalogCblSat",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "AnalogCblSat",
+          "IsEnable": false
+        },
+        {
+          "Header": "ANALOG DVD",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "AnalogDvd",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "AnalogDvd",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "AnalogDvd",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "AnalogDvd",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "AnalogDvd",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "AnalogDvd",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "AnalogDvd",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "AnalogDvd",
+          "IsEnable": false
+        },
+        {
+          "Header": "ANALOG CD",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "AnalogCd",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "AnalogCd",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "AnalogCd",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "AnalogCd",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "AnalogCd",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "AnalogCd",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "AnalogCd",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "AnalogCd",
+          "IsEnable": false
+        },
+        {
+          "Header": "ANALOG AUX",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "AnalogAux",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "AnalogAux",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "AnalogAux",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "AnalogAux",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "AnalogAux",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "AnalogAux",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "AnalogAux",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "AnalogAux",
+          "IsEnable": false
+        },
+        {
+          "Header": "DIGITAL GAME",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "DigitalGame",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "DigitalGame",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "DigitalGame",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "DigitalGame",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "DigitalGame",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "DigitalGame",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "DigitalGame",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "DigitalGame",
+          "IsEnable": false
+        },
+        {
+          "Header": "DIGITAL CBL/SAT",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "DigitalCblSat",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "DigitalCblSat",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "DigitalCblSat",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "DigitalCblSat",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "DigitalCblSat",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "DigitalCblSat",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "DigitalCblSat",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "DigitalCblSat",
+          "IsEnable": false
+        },
+        {
+          "Header": "DIGITAL DVD",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "DigitalDvd",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "DigitalDvd",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "DigitalDvd",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "DigitalDvd",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "DigitalDvd",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "DigitalDvd",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "DigitalDvd",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "DigitalDvd",
+          "IsEnable": false
+        },
+        {
+          "Header": "DIGITAL TV",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "DigitalTV",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "DigitalTV",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "DigitalTV",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "DigitalTV",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "DigitalTV",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "DigitalTV",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "DigitalTV",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "DigitalTV",
+          "IsEnable": false
+        },
+        {
+          "Header": "DIGITAL MEDIA PLAYER",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "DigitalMediaPlayer",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "DigitalMediaPlayer",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "DigitalMediaPlayer",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "DigitalMediaPlayer",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "DigitalMediaPlayer",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "DigitalMediaPlayer",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 810.0,
+                "Lower": 790.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.01,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "DigitalMediaPlayer",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "DigitalMediaPlayer",
+          "IsEnable": false
+        },
+        {
+          "Header": "TONE",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "Tone",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "Tone",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "Tone",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "Tone",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "Tone",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "Tone",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 900.0,
+                "Lower": 600.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 1.0,
+                "Lower": 0.1,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 4.0,
+                "Lower": 0.1,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "Tone",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "Tone",
+          "IsEnable": false
+        },
+        {
+          "Header": "HeadPhone",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.5,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "HeadPhoneLeft",
+              "Input": "HeadPhone",
+              "Name": "HEADPHONE LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 50.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "HeadPhoneRight",
+              "Input": "HeadPhone",
+              "Name": "HEAD PHONE RIGHT"
+            }
+          ],
+          "AudioInput": "HeadPhone",
+          "IsEnable": false
+        },
+        {
+          "Header": "Zone2",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "Zone2",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "Zone2",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 0.1,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "Zone2",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "Zone2",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "Zone2",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "Zone2",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1010.0,
+                "Lower": 990.0,
+                "Label": null
+              },
+              "Amplitude": {
+                "Upper": 9.0,
+                "Lower": 3.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "Zone2",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "Zone2",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI CD",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiCd",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiCd",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiCd",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiCd",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiCd",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiCd",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiCd",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiCd",
+          "IsEnable": false
+        },
+        {
+          "Header": "HDMI AUX",
+          "AudioLimmitations": [
+            {
+              "Id": "b8d235aa-b5b7-4a44-b01c-b8ffbe970da9",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontLeft",
+              "Input": "HdmiAux1",
+              "Name": "FRONT LEFT"
+            },
+            {
+              "Id": "e222c61e-324f-4b53-91da-216a7d6056a7",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "FrontRight",
+              "Input": "HdmiAux1",
+              "Name": "FRONT RIGHT"
+            },
+            {
+              "Id": "c81cb29b-01f0-4b05-84f4-232776517011",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "Center",
+              "Input": "HdmiAux1",
+              "Name": "CENTER"
+            },
+            {
+              "Id": "786d2b8e-118d-47a4-8fa4-7cc252bc70a4",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundLeft",
+              "Input": "HdmiAux1",
+              "Name": "SURROUND LEFT"
+            },
+            {
+              "Id": "cc6670c4-acd5-4e43-bb38-75b8e72efe1c",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundRight",
+              "Input": "HdmiAux1",
+              "Name": "SURROUND RIGHT"
+            },
+            {
+              "Id": "48a6b715-c213-494a-860e-9949839b15c5",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackLeft",
+              "Input": "HdmiAux1",
+              "Name": "SURROUNDBACK LEFT"
+            },
+            {
+              "Id": "b5ca5884-2a6e-4a03-a5bb-fea174d3d481",
+              "Frequency": {
+                "Upper": 1100.0,
+                "Lower": 900.0,
+                "Label": "Frequency"
+              },
+              "Amplitude": {
+                "Upper": 21.0,
+                "Lower": 15.0,
+                "Label": "Amplitude"
+              },
+              "Thd": {
+                "Upper": 1.0,
+                "Lower": 0.0001,
+                "Label": "Thd"
+              },
+              "Channel": "SurroundBackRight",
+              "Input": "HdmiAux1",
+              "Name": "SURROUNDBACK RIGHT"
+            }
+          ],
+          "AudioInput": "HdmiAux1",
+          "IsEnable": false
+        }
+      ],
+      "SampleImageSettings": [
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/Hdmi8k1.bmp;Resources/images/4700-E2/Hdmi8k2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "Hdmi8k",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiCblSat1.bmp;Resources/images/4700-E2/HdmiCblSat2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCblSat",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiBluray1.bmp;Resources/images/4700-E2/HdmiBluray2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiBluray",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiGame1.bmp;Resources/images/4700-E2/HdmiGame2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiGame",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiMediaPlayer1.bmp;Resources/images/4700-E2/HdmiMediaPlayer2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiMediaPlayer",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiDvd1.bmp;Resources/images/4700-E2/HdmiDvd2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiDvd",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiCd1.bmp;Resources/images/4700-E2/HdmiCd2.bmp",
+          "Name": "Sample image of hdmi",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCd",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/cvbs_cbl_sat1.bmp;Resources/images/4700-E2/cvbs_cbl_sat2.bmp",
+          "Name": "Sample image of cvbs",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "CvbsCblSat",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/cvbs_media1.bmp;Resources/images/4700-E2/cvbs_media2.bmp",
+          "Name": "Sample image of cvbs",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "CvbsMediaPlayer",
+          "VideoOutput": "HdmiOut1"
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "FilePath": "Resources/images/4700-E2/HdmiAux1.bmp;Resources/images/4700-E2/HdmiAux2.bmp",
+          "Name": "Sample image of cvbs",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiAux1",
+          "VideoOutput": "HdmiOut1"
+        }
+      ],
+      "ImageOffsetSettings": [
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI 8K- HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "Hdmi8k",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI AUX1-HDMI OUT1",
+          "Label": "HDMI AUX1- HDMI OUT1",
+          "VideoInput": "HdmiAux1",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI AUX1-HDMI OUT2",
+          "Label": "HDMI AUX1-HDMI OUT2",
+          "VideoInput": "HdmiAux1",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI AUX2- HDMI OUT1",
+          "Label": "HDMI AUX2- HDMI-OUT1",
+          "VideoInput": "HdmiAux2",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI AUX1-HDMI OUT2",
+          "Label": "HDMI AUX2-HDMI OUT2",
+          "VideoInput": "HdmiAux2",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI MP-HDMI OUT3",
+          "Label": "HDMI MP-HDMI OUT3",
+          "VideoInput": "HdmiMediaPlayer",
+          "VideoOutput": "HdmiOut3",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "CVBS-MEDIA PLAYER",
+          "Label": "CVBS-MEDIA PLAYER",
+          "VideoInput": "CvbsMediaPlayer",
+          "VideoOutput": "CVBS",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "CVBS-CBL/SAT",
+          "Label": "CVBS-CBL/SAT",
+          "VideoInput": "CvbsCblSat",
+          "VideoOutput": "CVBS",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI CBL/SAT - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCblSat",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "596b08f3-1023-48e4-b8db-9ac9472cd336",
+          "Name": "HDMI DVD - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiDvd",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "48235627-87a4-46de-b8bd-af2c06259d4b",
+          "Name": "HDMI BLURAY - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiBluray",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "2799abff-5382-451d-9753-3a7280ed0e85",
+          "Name": "HDMI GAME - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiGame",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "8dfe035b-fdd5-4656-ac9f-547d35bad252",
+          "Name": "HDMI MEDIA PLAYER - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiMediaPlayer",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI 8K - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "Hdmi8k",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "6e87b377-e8d5-4b39-ac37-e25d49d3d5b8",
+          "Name": "HDMI CBL/SAT - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCblSat",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "596b08f3-1023-48e4-b8db-9ac9472cd336",
+          "Name": "HDMI DVD - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiDvd",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "48235627-87a4-46de-b8bd-af2c06259d4b",
+          "Name": "HDMI BLURAY - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiBluray",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "2799abff-5382-451d-9753-3a7280ed0e85",
+          "Name": "HDMI GAME - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiGame",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "8dfe035b-fdd5-4656-ac9f-547d35bad252",
+          "Name": "HDMI MEDIA PLAYER - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiMediaPlayer",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "8dfe035b-fdd5-4656-ac9f-547d35bad256",
+          "Name": "USB - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "Usb",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "8dfe035b-fdd5-4656-ac9f-547d35bad252",
+          "Name": "HDMI CD - HDMI OUT1",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCd",
+          "VideoOutput": "HdmiOut1",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        },
+        {
+          "Id": "8dfe035b-fdd5-4656-ac9f-547d35bad256",
+          "Name": "HDMI CD - HDMI OUT2",
+          "Label": "HDMI SAMPLE",
+          "VideoInput": "HdmiCd",
+          "VideoOutput": "HdmiOut2",
+          "DifferentPercent": 0.2,
+          "Threshold": 15
+        }
+      ],
+      "DaqChannelSettings": [
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "FrontRight",
+          "AudioChannel": "FrontRight",
+          "PhysicalName": "amproc/ai0",
+          "AssignName": "FrontRight",
+          "ChannelIndex": 0,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "FrontLeft",
+          "AudioChannel": "FrontLeft",
+          "PhysicalName": "amproc/ai1",
+          "AssignName": "FrontLeft",
+          "ChannelIndex": 1,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Center",
+          "AudioChannel": "Center",
+          "PhysicalName": "amproc/ai2",
+          "AssignName": "Center",
+          "ChannelIndex": 2,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "SurroundRight",
+          "AudioChannel": "SurroundRight",
+          "PhysicalName": "amproc/ai3",
+          "AssignName": "SurroundRight",
+          "ChannelIndex": 3,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "SurroundLeft",
+          "AudioChannel": "SurroundLeft",
+          "PhysicalName": "amproc/ai4",
+          "AssignName": "SurroundLeft",
+          "ChannelIndex": 4,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "SurroundBackRight",
+          "AudioChannel": "SurroundBackRight",
+          "PhysicalName": "amproc/ai5",
+          "AssignName": "SurroundBackRight",
+          "ChannelIndex": 5,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "SurroundBackLeft",
+          "AudioChannel": "SurroundBackLeft",
+          "PhysicalName": "amproc/ai6",
+          "AssignName": "SurroundBackLeft",
+          "ChannelIndex": 6,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Height1_Right",
+          "AudioChannel": "Height1Right",
+          "PhysicalName": "amproc/ai7",
+          "AssignName": "Height1Right",
+          "ChannelIndex": 7,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Height1_Left",
+          "AudioChannel": "Height1Left",
+          "PhysicalName": "amproc/ai8",
+          "AssignName": "Height1Left",
+          "ChannelIndex": 8,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Height2_Right",
+          "AudioChannel": "Height2Right",
+          "PhysicalName": "amproc/ai9",
+          "AssignName": "Height2Right",
+          "ChannelIndex": 9,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Height2_Left",
+          "AudioChannel": "Height2Left",
+          "PhysicalName": "amproc/ai10",
+          "AssignName": "Height2Left",
+          "ChannelIndex": 10,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 16.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Zone2_PreOut_Right",
+          "AudioChannel": "Zone2PreOutRight",
+          "PhysicalName": "amproc/ai11",
+          "AssignName": "Zone2PreOutRight",
+          "ChannelIndex": 11,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 3.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Zone2_PreOut_Left",
+          "AudioChannel": "Zone2PreOutLeft",
+          "PhysicalName": "amproc/ai12",
+          "AssignName": "Zone2PreOutLeft",
+          "ChannelIndex": 12,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 3.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Zone3_PreOut_Right",
+          "AudioChannel": "Zone3PreOutRight",
+          "PhysicalName": "amproc/ai13",
+          "AssignName": "Zone3PreOutRight",
+          "ChannelIndex": 13,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 3.0
+        },
+        {
+          "Id": "00000000-0000-0000-0000-000000000000",
+          "DeviceIds": [
+            "da61f408-8892-4f55-98fa-b7a79ef6615c"
+          ],
+          "Name": "Zone3_PreOut_Left",
+          "AudioChannel": "Zone3PreOutLeft",
+          "PhysicalName": "amproc/ai14",
+          "AssignName": "Zone3PreOutLeft",
+          "ChannelIndex": 14,
+          "AITerminalConfiguration": "Rse",
+          "Gain": 3.0
+        }
+      ],
+      "HeosDeviceSetting": null,
+      "WorkFlowSetting": {
+        "RetryTime": 10,
+        "RetryDelay": 1000
+      },
+      "DefaultStateSetting": {
+        "SourceMode": "",
+        "AmpAssignMode": "9.1",
+        "SpeakerSelect": "FloorAndHeigh"
+      },
+      "AutoRetest": true
+    }
+  },
+  "definitions": {
+    "NavigationModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ProjectName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Path": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Title": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "BindableBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    },
+    "LogFileSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "SequenceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Date": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "FileName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "FilePath": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "TesseractSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "Language",
+        "Mode"
+      ],
+      "properties": {
+        "Language": {
+          "type": "string",
+          "description": "Tên file train model ví dụ: eng.\r\n Nếu có nhiều file train ví dụ: eng+train "
+        },
+        "Mode": {
+          "type": "string",
+          "description": "\r\n Summary:\r\n     Run Tesseract only - fastest\r\nTesseractOnly = 0,\r\n\r\n Summary:\r\n     Run just the LSTM line recognizer.\r\nLstmOnly = 1,\r\n\r\n Summary:\r\n     Run the LSTM recognizer, but allow fallback to Tesseract when things get difficult.\r\nTesseractLstmCombined = 2,\r\n\r\n Summary:\r\n     Specify this mode when calling init_*(), to indicate that any of the above modes\r\n     should be automatically inferred from the variables in the language-specific\r\n     config, command-line configs, or if not specified in any of the above should\r\n     be set to the default OEM_TESSERACT_ONLY.\r\n Default = 3"
+        }
+      }
+    },
+    "DeviceVersion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Data": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/KeyValue"
+            }
+          ]
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Index": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "KeyValue": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Key": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Value": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "TextExtractorSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Thres": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Max": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsInvert": {
+          "type": "boolean"
+        },
+        "X": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsRaw": {
+          "type": "boolean"
+        }
+      }
+    },
+    "InputScanType": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Anam",
+        "Mac",
+        "Customer",
+        "Scanner"
+      ],
+      "enum": [
+        "Anam",
+        "Mac",
+        "Customer",
+        "Scanner"
+      ]
+    },
+    "ScanMode": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Enter",
+        "Tab"
+      ],
+      "enum": [
+        "Enter",
+        "Tab"
+      ]
+    },
+    "Enable": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Off",
+        "On"
+      ],
+      "enum": [
+        "Off",
+        "On"
+      ]
+    },
+    "AvrAtsSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "SerialPortSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SerialPortSetting"
+          }
+        },
+        "AudioDaqSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioDaqSetting"
+          }
+        },
+        "AudioPlayerSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerSetting"
+          }
+        },
+        "VideoCaptureSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/VideoCaptureSetting"
+          }
+        },
+        "AudioLimitationSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioLimitationSetting"
+          }
+        },
+        "SampleImageSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SampleImageSetting"
+          }
+        },
+        "ImageOffsetSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/ImageOffsetSetting"
+          }
+        },
+        "DaqChannelSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioChannelSetting"
+          }
+        },
+        "HeosDeviceSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/HeosDeviceSetting"
+            }
+          ]
+        },
+        "WorkFlowSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/WorkFlowSetting"
+            }
+          ]
+        },
+        "DefaultStateSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/DefaultStateSetting"
+            }
+          ]
+        },
+        "AutoRetest": {
+          "type": "boolean"
+        }
+      }
+    },
+    "SerialPortSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "Device": {
+              "$ref": "#/definitions/DeviceType"
+            },
+            "Port": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Baudrate": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "EndingCharacter": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ConnectCommandContent": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ExpectedConnectCommandResult": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "DeviceType": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "BtBox",
+        "Sunmodule",
+        "Remote",
+        "DutRemote"
+      ],
+      "enum": [
+        "BtBox",
+        "Sunmodule",
+        "Remote",
+        "DutRemote"
+      ]
+    },
+    "BaseDeviceConfig": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioDaqSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "SamplingRate": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "NumberOfSample": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Value": {
+              "oneOf": [
+                {},
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "Input": {
+              "$ref": "#/definitions/AudioInput"
+            },
+            "DaqType": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "SignalOffsets": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "$ref": "#/definitions/KeyValue"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "AudioInput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ],
+      "enum": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ]
+    },
+    "AudioPlayerSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "DeviceNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioPlayerFileConfigs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerFileSetting"
+          }
+        },
+        "AudioPlayerGeneratorConfigs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioPlayerGeneratorSetting"
+          }
+        }
+      }
+    },
+    "AudioPlayerFileSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "FilePath": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput2"
+        }
+      }
+    },
+    "AudioInput2": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Arc",
+        "AnalogPhono",
+        "AnalogCblSat",
+        "AnalogDvd",
+        "AnalogAux",
+        "AnalogCd",
+        "DigitalTV",
+        "DigitalGame",
+        "DigitalCblSat",
+        "DigitalDvd",
+        "DigitalMediaPlayer",
+        "Aux",
+        "Optical",
+        "Phono",
+        "Microphone",
+        "Zone2",
+        "Hdmi",
+        "Tone",
+        "Usb",
+        "HeadPhone",
+        "Bluetooth",
+        "Heos",
+        "None",
+        "HdmiAux1",
+        "HdmiAux2",
+        "HdmiCd"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "AudioPlayerGeneratorSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Frequency": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "FrequencyEnd": {
+          "type": "number",
+          "format": "double"
+        },
+        "Amplitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "Type": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "SweepLength": {
+          "type": "number",
+          "format": "double"
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput2"
+        }
+      }
+    },
+    "VideoCaptureSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseDeviceConfig"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceNumber": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Width": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Height": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Output": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "VideoCaptureDeviceType": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioLimitationSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Header": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "AudioLimmitations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AudioLimitation"
+          }
+        },
+        "AudioInput": {
+          "$ref": "#/definitions/AudioInput"
+        },
+        "IsEnable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "AudioLimitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "Frequency": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Amplitude": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Thd": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Limitation"
+            }
+          ]
+        },
+        "Channel": {
+          "$ref": "#/definitions/AudioChannel"
+        },
+        "Input": {
+          "$ref": "#/definitions/AudioInput"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "Limitation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Upper": {
+              "type": "number",
+              "format": "double"
+            },
+            "Lower": {
+              "type": "number",
+              "format": "double"
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "AudioChannel": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "FrontLeft",
+        "FrontRight",
+        "Center",
+        "SurroundLeft",
+        "SurroundRight",
+        "SurroundBackLeft",
+        "SurroundBackRight",
+        "HeadPhoneLeft",
+        "HeadPhoneRight",
+        "HeosLeft",
+        "HeosRight",
+        "Left",
+        "Right",
+        "Woofer",
+        "Height1Left",
+        "Height1Right",
+        "Height2Left",
+        "Height2Right",
+        "Zone2PreOutLeft",
+        "Zone2PreOutRight",
+        "Zone3PreOutLeft",
+        "Zone3PreOutRight"
+      ],
+      "enum": [
+        "FrontLeft",
+        "FrontRight",
+        "Center",
+        "SurroundLeft",
+        "SurroundRight",
+        "SurroundBackLeft",
+        "SurroundBackRight",
+        "HeadPhoneLeft",
+        "HeadPhoneRight",
+        "HeosLeft",
+        "HeosRight",
+        "Left",
+        "Right",
+        "Woofer",
+        "Height1Left",
+        "Height1Right",
+        "Height2Left",
+        "Height2Right",
+        "Zone2PreOutLeft",
+        "Zone2PreOutRight",
+        "Zone3PreOutLeft",
+        "Zone3PreOutRight"
+      ]
+    },
+    "SampleImageSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "FilePath": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "VideoInput": {
+              "$ref": "#/definitions/VideoInput"
+            },
+            "VideoOutput": {
+              "$ref": "#/definitions/VideoOutput"
+            }
+          }
+        }
+      ]
+    },
+    "VideoInput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Hdmi",
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Usb",
+        "Version",
+        "ComponetVideo",
+        "HdmiAux1",
+        "HdmiAux2",
+        "CvbsCblSat",
+        "CvbsMediaPlayer",
+        "HdmiCd"
+      ],
+      "enum": [
+        "Hdmi",
+        "Hdmi8k",
+        "HdmiCblSat",
+        "HdmiDvd",
+        "HdmiBluray",
+        "HdmiGame",
+        "HdmiMediaPlayer",
+        "Usb",
+        "Version",
+        "ComponetVideo",
+        "HdmiAux1",
+        "HdmiAux2",
+        "CvbsCblSat",
+        "CvbsMediaPlayer",
+        "HdmiCd"
+      ]
+    },
+    "VideoOutput": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Version",
+        "CVBS",
+        "HdmiOut3",
+        "Monitor1"
+      ],
+      "enum": [
+        "HdmiOut1",
+        "HdmiOut2",
+        "Version",
+        "CVBS",
+        "HdmiOut3",
+        "Monitor1"
+      ]
+    },
+    "ImageOffsetSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Label": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "VideoInput": {
+          "$ref": "#/definitions/VideoInput"
+        },
+        "VideoOutput": {
+          "$ref": "#/definitions/VideoOutput"
+        },
+        "DifferentPercent": {
+          "type": "number",
+          "format": "double"
+        },
+        "Threshold": {
+          "type": "integer",
+          "format": "byte"
+        }
+      }
+    },
+    "AudioChannelSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Id": {
+              "type": "string",
+              "format": "guid"
+            },
+            "DeviceIds": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "format": "guid"
+              }
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "AudioChannel": {
+              "$ref": "#/definitions/AudioChannel"
+            },
+            "PhysicalName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "AssignName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ChannelIndex": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "AITerminalConfiguration": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Gain": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        }
+      ]
+    },
+    "HeosDeviceSetting": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Ip": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "WorkFlowSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "RetryTime",
+        "RetryDelay"
+      ],
+      "properties": {
+        "RetryTime": {
+          "type": "integer",
+          "description": "Số lần rety test Audio và Video",
+          "format": "int32"
+        },
+        "RetryDelay": {
+          "type": "integer",
+          "description": "Delay giữa các lần retry",
+          "format": "int32"
+        }
+      }
+    },
+    "DefaultStateSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "SourceMode": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Kênh khi khởi động set AVR sau khi reset factory"
+        },
+        "AmpAssignMode": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "AmpAssignMode khi khởi động set AVR sau khi reset factory"
+        },
+        "SpeakerSelect": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "SpeakerSelect khi khởi động set AVR sau khi reset factory"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/BindableBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Navigation": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/NavigationModel"
+            }
+          ]
+        },
+        "LogFile": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/LogFileSetting"
+            }
+          ]
+        },
+        "Brand": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "TesseractSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TesseractSetting"
+            }
+          ]
+        },
+        "DeviceVersions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/DeviceVersion"
+          }
+        },
+        "TextExtractorSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/TextExtractorSetting"
+          }
+        },
+        "InputScanType": {
+          "$ref": "#/definitions/InputScanType"
+        },
+        "ScanMode": {
+          "$ref": "#/definitions/ScanMode"
+        },
+        "ScanAllApp": {
+          "$ref": "#/definitions/Enable"
+        },
+        "EnableDataBase": {
+          "$ref": "#/definitions/Enable"
+        },
+        "AvrAtsSetting": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/AvrAtsSetting"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

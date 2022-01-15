@@ -1,1059 +1,2466 @@
-﻿{
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "http://example.com/example.json",
-  "type": "array",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
-  "default": [],
-  "examples": [
-    [
-      {
-        "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
-        "TestingModuleStatus": 2,
-        "TestingModule": "Zone2",
-        "TestingStep": 0,
-        "Result": 2,
-        "Progress": 0,
-        "Name": "ZONE2",
-        "TestingOptions": [
-          "Audio"
-        ],
-        "IsRetest": false,
-        "Order": 9,
-        "IsEnable": true,
-        "DetailResults": [
-          {
-            "Label": "SurroundBack-Left",
-            "Key": "SurroundBackLeft",
-            "IsHasChild": true,
-            "DetailResults": [
-              {
-                "Label": "Tần số",
-                "Key": "Frequency",
-                "Unit": "Hz"
-              },
-              {
-                "Label": "Biên độ",
-                "Key": "Amplitude",
-                "Unit": "V"
-              },
-              {
-                "Label": "Thd",
-                "Key": "Thd",
-                "Unit": "%"
-              }
-            ]
-          },
-          {
-            "Label": "SurroundBack-Right",
-            "Key": "SurroundBackRight",
-            "IsHasChild": true,
-            "DetailResults": [
-              {
-                "Label": "Tần số",
-                "Key": "Frequency",
-                "Unit": "Hz"
-              },
-              {
-                "Label": "Biên độ",
-                "Key": "Amplitude",
-                "Unit": "V"
-              },
-              {
-                "Label": "Thd",
-                "Key": "Thd",
-                "Unit": "%"
-              }
-            ]
-          }
-        ]
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CardModuleStatus",
+  "x-example": [
+    {
+      "Id": "d341a7b3-5686-4069-a7da-69fd2599f6a4",
+      "TestingModuleStatus": 3,
+      "TestingModule": "Zone2",
+      "Result": 2,
+      "Name": "ZONE2",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 1,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
       },
-      {
-        "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
-        "TestingModuleStatus": 2,
-        "TestingModule": "HdmiCblSat",
-        "TestingStep": 0,
-        "Result": 2,
-        "Progress": 0,
-        "Name": "HDMI-CBL/SAT",
-        "TestingOptions": [
-          "Audio",
-          "Video"
-        ],
-        "VideoOutputs": [
-          "HdmiOut1"
-        ],
-        "IsRetest": false,
-        "Order": 1,
-        "IsEnable": true,
-        "DetailResults": [
-          {
-            "Label": "Front-Left",
-            "Key": "FrontLeft",
-            "IsHasChild": true,
-            "DetailResults": [
-              {
-                "Label": "Tần số",
-                "Key": "Frequency",
-                "Unit": "Hz"
-              },
-              {
-                "Label": "Biên độ",
-                "Key": "Amplitude",
-                "Unit": "V"
-              },
-              {
-                "Label": "Thd",
-                "Key": "Thd",
-                "Unit": "%"
-              }
-            ]
-          },
-          {
-            "Label": "Front-Right",
-            "Key": "FrontRight",
-            "IsHasChild": true,
-            "DetailResults": [
-              {
-                "Label": "Tần số",
-                "Key": "Frequency",
-                "Unit": "Hz"
-              },
-              {
-                "Label": "Biên độ",
-                "Key": "Amplitude",
-                "Unit": "V"
-              },
-              {
-                "Label": "Thd",
-                "Key": "Thd",
-                "Unit": "%"
-              }
-            ]
-          },
-          {
-            "Label": "HdmiOut1",
-            "Key": "HdmiOut1",
-            "IsHasChild": true,
-            "DetailResults": [
-              {
-                "Label": "Diff",
-                "Key": "DifferentPercent"
-              },
-              {
-                "Label": "Size",
-                "Key": "Size"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+      "DetailResults": [
+        {
+          "Label": "Z2-L",
+          "Key": "Zone2PreOutLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Z2-R",
+          "Key": "Zone2PreOutRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "8bc6df06-f824-404b-b1c3-fa24de0eb55a",
+      "TestingModuleStatus": 3,
+      "TestingModule": "Zone3",
+      "Result": 2,
+      "Name": "ZONE3",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 1,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Z3-L",
+          "Key": "Zone3PreOutLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Z3-R",
+          "Key": "Zone3PreOutRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "3804ec36-3e3b-43c8-87ee-3593f805dfe3",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiCblSat",
+      "Result": 2,
+      "Name": "HDMI-CBL/SAT",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 1,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "37d1b04b-7a46-4b95-8661-458e052b748e",
+      "TestingModuleStatus": 3,
+      "TestingModule": "DigitalCblSat",
+      "Result": 2,
+      "Name": "DIGITAL-CBL/SAT",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 2,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "b3c52c56-cbec-47b1-9d56-2ee4aa444eec",
+      "TestingModuleStatus": 3,
+      "TestingModule": "Hdmi8k",
+      "Result": 2,
+      "Name": "HDMI-8K",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 3,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut2"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Center",
+          "Key": "Center",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Surround-Left",
+          "Key": "SurroundLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Surround-Right",
+          "Key": "SurroundRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut2",
+          "Key": "HdmiOut2",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "99979abe-3255-43ff-9c1c-0e5086cba7b7",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiMediaPlayer",
+      "Result": 2,
+      "Name": "HDMI-MEDIA PLAYER",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 4,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut3"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "SurroundBack-Left",
+          "Key": "SurroundBackLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "SurroundBack-Right",
+          "Key": "SurroundBackRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut3",
+          "Key": "HdmiOut3",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "910e710b-0ab3-4fb9-87fb-8c16b844758f",
+      "TestingModuleStatus": 3,
+      "TestingModule": "DigitalMediaPlayer",
+      "Result": 2,
+      "Name": "DIGITAL-MEDIA PLAYER",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 5,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "0899d159-2769-47d3-871c-47de6f443bc9",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiGame",
+      "Result": 2,
+      "Name": "HDMI-GAME",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 6,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "34f7d7eb-3dc5-4ec0-967d-280d686ba802",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiBluray",
+      "Result": 2,
+      "Name": "HDMI-BLURAY",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 7,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "c952bc87-7e99-436b-a329-563ed927fd2f",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiAux1",
+      "Result": 2,
+      "Name": "HDMI-AUX",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 7,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "f962a710-09f4-4fa4-b5eb-610592028069",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiCd",
+      "Result": 2,
+      "Name": "HDMI-CD",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 7,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "cb5ad89b-51e9-4e7a-bc89-c005d199d653",
+      "TestingModuleStatus": 3,
+      "TestingModule": "HdmiDvd",
+      "Result": 2,
+      "Name": "HDMI-DVD",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 8,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        0,
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "HdmiOut1",
+          "Key": "HdmiOut1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Diff",
+              "Key": "DifferentPercent",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Size",
+              "Key": "Size",
+              "Value": "-----",
+              "Unit": null,
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "7c6e591b-369a-4029-963e-60c2e7f44c5f",
+      "TestingModuleStatus": 3,
+      "TestingModule": "Version",
+      "Result": 2,
+      "Name": "VERSION",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 9,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": [
+        "HdmiOut1"
+      ],
+      "TestingOptions": [
+        1
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Main",
+          "Key": "Main",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "Main FBL",
+          "Key": "Main FBL",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "DSP1",
+          "Key": "DSP1",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "DSP2",
+          "Key": "DSP2",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "A.PLD",
+          "Key": "A.PLD",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "V.PLD",
+          "Key": "V.PLD",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "GUI",
+          "Key": "GUI",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "RSTR",
+          "Key": "RSTR",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "HEOS Version",
+          "Key": "HEOS Version",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "HEOS Config",
+          "Key": "HEOS Config",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        },
+        {
+          "Label": "HEOS Locale",
+          "Key": "HEOS Locale",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": false,
+          "IsUpdated": false,
+          "DetailResults": null
+        }
+      ]
+    },
+    {
+      "Id": "8e799a0c-5a1b-48ef-927f-bf30be2e947c",
+      "TestingModuleStatus": 3,
+      "TestingModule": "DigitalDvd",
+      "Result": 2,
+      "Name": "DIGITAL-DVD",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 9,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "54d97f39-0e7d-4c8a-aeca-0cddc74b3055",
+      "TestingModuleStatus": 3,
+      "TestingModule": "DigitalTV",
+      "Result": 2,
+      "Name": "DIGITAL-TV",
+      "Step": null,
+      "IsRetest": false,
+      "Order": 10,
+      "IsEnable": true,
+      "Service": null,
+      "ServiceName": null,
+      "Duration": 0.0,
+      "IsExpander": false,
+      "VideoOutputs": null,
+      "TestingOptions": [
+        0
+      ],
+      "Stopwatch": {
+        "IsRunning": false,
+        "Elapsed": "00:00:00",
+        "ElapsedMilliseconds": 0,
+        "ElapsedTicks": 0
+      },
+      "DetailResults": [
+        {
+          "Label": "Front-Left",
+          "Key": "FrontLeft",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        },
+        {
+          "Label": "Front-Right",
+          "Key": "FrontRight",
+          "Value": "-----",
+          "Unit": null,
+          "Result": 2,
+          "IsViewDetail": false,
+          "IsHasChild": true,
+          "IsUpdated": false,
+          "DetailResults": [
+            {
+              "Label": "Tần số",
+              "Key": "Frequency",
+              "Value": "-----",
+              "Unit": "Hz",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Biên độ",
+              "Key": "Amplitude",
+              "Value": "-----",
+              "Unit": "V",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            },
+            {
+              "Label": "Thd",
+              "Key": "Thd",
+              "Value": "-----",
+              "Unit": "%",
+              "Result": 2,
+              "IsViewDetail": false,
+              "IsHasChild": false,
+              "IsUpdated": false,
+              "DetailResults": null
+            }
+          ]
+        }
+      ]
+    }
   ],
-  "additionalItems": true,
-  "items": {
-    "$id": "#/items",
-    "anyOf": [
-      {
-        "$id": "#/items/anyOf/0",
-        "type": "object",
-        "title": "The first anyOf schema",
-        "description": "An explanation about the purpose of this instance.",
-        "default": {},
-        "examples": [
-          {
-            "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
-            "TestingModuleStatus": 2,
-            "TestingModule": "Zone2",
-            "TestingStep": 0,
-            "Result": 2,
-            "Progress": 0,
-            "Name": "ZONE2",
-            "TestingOptions": [
-              "Audio"
-            ],
-            "IsRetest": false,
-            "Order": 9,
-            "IsEnable": true,
-            "DetailResults": [
-              {
-                "Label": "SurroundBack-Left",
-                "Key": "SurroundBackLeft",
-                "IsHasChild": true,
-                "DetailResults": [
-                  {
-                    "Label": "Tần số",
-                    "Key": "Frequency",
-                    "Unit": "Hz"
-                  },
-                  {
-                    "Label": "Biên độ",
-                    "Key": "Amplitude",
-                    "Unit": "V"
-                  },
-                  {
-                    "Label": "Thd",
-                    "Key": "Thd",
-                    "Unit": "%"
-                  }
-                ]
-              },
-              {
-                "Label": "SurroundBack-Right",
-                "Key": "SurroundBackRight",
-                "IsHasChild": true,
-                "DetailResults": [
-                  {
-                    "Label": "Tần số",
-                    "Key": "Frequency",
-                    "Unit": "Hz"
-                  },
-                  {
-                    "Label": "Biên độ",
-                    "Key": "Amplitude",
-                    "Unit": "V"
-                  },
-                  {
-                    "Label": "Thd",
-                    "Key": "Thd",
-                    "Unit": "%"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "required": [
-          "Id",
-          "TestingModuleStatus",
-          "TestingModule",
-          "TestingStep",
-          "Result",
-          "Progress",
-          "Name",
-          "TestingOptions",
-          "IsRetest",
-          "Order",
-          "IsEnable",
-          "DetailResults"
-        ],
-        "properties": {
-          "Id": {
-            "$id": "#/items/anyOf/0/properties/Id",
-            "type": "string",
-            "title": "The Id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e"
-            ]
-          },
-          "TestingModuleStatus": {
-            "$id": "#/items/anyOf/0/properties/TestingModuleStatus",
-            "type": "integer",
-            "title": "The TestingModuleStatus schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              2
-            ]
-          },
-          "TestingModule": {
-            "$id": "#/items/anyOf/0/properties/TestingModule",
-            "type": "string",
-            "title": "The TestingModule schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "Zone2"
-            ]
-          },
-          "TestingStep": {
-            "$id": "#/items/anyOf/0/properties/TestingStep",
-            "type": "integer",
-            "title": "The TestingStep schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              0
-            ]
-          },
-          "Result": {
-            "$id": "#/items/anyOf/0/properties/Result",
-            "type": "integer",
-            "title": "The Result schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              2
-            ]
-          },
-          "Progress": {
-            "$id": "#/items/anyOf/0/properties/Progress",
-            "type": "integer",
-            "title": "The Progress schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              0
-            ]
-          },
-          "Name": {
-            "$id": "#/items/anyOf/0/properties/Name",
-            "type": "string",
-            "title": "The Name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "ZONE2"
-            ]
-          },
-          "TestingOptions": {
-            "$id": "#/items/anyOf/0/properties/TestingOptions",
-            "type": "array",
-            "title": "The TestingOptions schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-              [
-                "Audio"
-              ]
-            ],
-            "additionalItems": true,
-            "items": {
-              "$id": "#/items/anyOf/0/properties/TestingOptions/items",
-              "anyOf": [
-                {
-                  "$id": "#/items/anyOf/0/properties/TestingOptions/items/anyOf/0",
-                  "type": "string",
-                  "title": "The first anyOf schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": "",
-                  "examples": [
-                    "Audio"
-                  ]
-                }
-              ]
-            }
-          },
-          "IsRetest": {
-            "$id": "#/items/anyOf/0/properties/IsRetest",
-            "type": "boolean",
-            "title": "The IsRetest schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-              false
-            ]
-          },
-          "Order": {
-            "$id": "#/items/anyOf/0/properties/Order",
-            "type": "integer",
-            "title": "The Order schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              9
-            ]
-          },
-          "IsEnable": {
-            "$id": "#/items/anyOf/0/properties/IsEnable",
-            "type": "boolean",
-            "title": "The IsEnable schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-              true
-            ]
-          },
-          "DetailResults": {
-            "$id": "#/items/anyOf/0/properties/DetailResults",
-            "type": "array",
-            "title": "The DetailResults schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-              [
-                {
-                  "Label": "SurroundBack-Left",
-                  "Key": "SurroundBackLeft",
-                  "IsHasChild": true,
-                  "DetailResults": [
-                    {
-                      "Label": "Tần số",
-                      "Key": "Frequency",
-                      "Unit": "Hz"
-                    },
-                    {
-                      "Label": "Biên độ",
-                      "Key": "Amplitude",
-                      "Unit": "V"
-                    },
-                    {
-                      "Label": "Thd",
-                      "Key": "Thd",
-                      "Unit": "%"
-                    }
-                  ]
-                },
-                {
-                  "Label": "SurroundBack-Right",
-                  "Key": "SurroundBackRight",
-                  "IsHasChild": true,
-                  "DetailResults": [
-                    {
-                      "Label": "Tần số",
-                      "Key": "Frequency",
-                      "Unit": "Hz"
-                    },
-                    {
-                      "Label": "Biên độ",
-                      "Key": "Amplitude",
-                      "Unit": "V"
-                    },
-                    {
-                      "Label": "Thd",
-                      "Key": "Thd",
-                      "Unit": "%"
-                    }
-                  ]
-                }
-              ]
-            ],
-            "additionalItems": true,
-            "items": {
-              "$id": "#/items/anyOf/0/properties/DetailResults/items",
-              "anyOf": [
-                {
-                  "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0",
-                  "type": "object",
-                  "title": "The first anyOf schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "Label": "SurroundBack-Left",
-                      "Key": "SurroundBackLeft",
-                      "IsHasChild": true,
-                      "DetailResults": [
-                        {
-                          "Label": "Tần số",
-                          "Key": "Frequency",
-                          "Unit": "Hz"
-                        },
-                        {
-                          "Label": "Biên độ",
-                          "Key": "Amplitude",
-                          "Unit": "V"
-                        },
-                        {
-                          "Label": "Thd",
-                          "Key": "Thd",
-                          "Unit": "%"
-                        }
-                      ]
-                    }
-                  ],
-                  "required": [
-                    "Label",
-                    "Key",
-                    "IsHasChild",
-                    "DetailResults"
-                  ],
-                  "properties": {
-                    "Label": {
-                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
-                      "type": "string",
-                      "title": "The Label schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "",
-                      "examples": [
-                        "SurroundBack-Left"
-                      ]
-                    },
-                    "Key": {
-                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
-                      "type": "string",
-                      "title": "The Key schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "",
-                      "examples": [
-                        "SurroundBackLeft"
-                      ]
-                    },
-                    "IsHasChild": {
-                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/IsHasChild",
-                      "type": "boolean",
-                      "title": "The IsHasChild schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": false,
-                      "examples": [
-                        true
-                      ]
-                    },
-                    "DetailResults": {
-                      "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults",
-                      "type": "array",
-                      "title": "The DetailResults schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": [],
-                      "examples": [
-                        [
-                          {
-                            "Label": "Tần số",
-                            "Key": "Frequency",
-                            "Unit": "Hz"
-                          },
-                          {
-                            "Label": "Biên độ",
-                            "Key": "Amplitude",
-                            "Unit": "V"
-                          }
-                        ]
-                      ],
-                      "additionalItems": true,
-                      "items": {
-                        "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items",
-                        "anyOf": [
-                          {
-                            "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0",
-                            "type": "object",
-                            "title": "The first anyOf schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": {},
-                            "examples": [
-                              {
-                                "Label": "Tần số",
-                                "Key": "Frequency",
-                                "Unit": "Hz"
-                              }
-                            ],
-                            "required": [
-                              "Label",
-                              "Key",
-                              "Unit"
-                            ],
-                            "properties": {
-                              "Label": {
-                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
-                                "type": "string",
-                                "title": "The Label schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Tần số"
-                                ]
-                              },
-                              "Key": {
-                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
-                                "type": "string",
-                                "title": "The Key schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Frequency"
-                                ]
-                              },
-                              "Unit": {
-                                "$id": "#/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Unit",
-                                "type": "string",
-                                "title": "The Unit schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Hz"
-                                ]
-                              }
-                            },
-                            "additionalProperties": true
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              ]
-            }
-          }
+  "definitions": {
+    "TestingStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Watting",
+        "Testing",
+        "Tested",
+        "None"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "Result": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "NG",
+        "OK",
+        "None"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "TestingOption": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Audio",
+        "Video",
+        "Version",
+        "Heos"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "Stopwatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "IsRunning": {
+          "type": "boolean"
         },
-        "additionalProperties": true
-      },
-      {
-        "$id": "#/items/anyOf/1",
-        "type": "object",
-        "title": "The second anyOf schema",
-        "description": "An explanation about the purpose of this instance.",
-        "default": {},
-        "examples": [
-          {
-            "Id": "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e",
-            "TestingModuleStatus": 2,
-            "TestingModule": "HdmiCblSat",
-            "TestingStep": 0,
-            "Result": 2,
-            "Progress": 0,
-            "Name": "HDMI-CBL/SAT",
-            "TestingOptions": [
-              "Audio",
-              "Video"
-            ],
-            "VideoOutputs": [
-              "HdmiOut1"
-            ],
-            "IsRetest": false,
-            "Order": 1,
-            "IsEnable": true,
-            "DetailResults": [
-              {
-                "Label": "Front-Left",
-                "Key": "FrontLeft",
-                "IsHasChild": true,
-                "DetailResults": [
-                  {
-                    "Label": "Tần số",
-                    "Key": "Frequency",
-                    "Unit": "Hz"
-                  },
-                  {
-                    "Label": "Biên độ",
-                    "Key": "Amplitude",
-                    "Unit": "V"
-                  },
-                  {
-                    "Label": "Thd",
-                    "Key": "Thd",
-                    "Unit": "%"
-                  }
-                ]
-              },
-              {
-                "Label": "Front-Right",
-                "Key": "FrontRight",
-                "IsHasChild": true,
-                "DetailResults": [
-                  {
-                    "Label": "Tần số",
-                    "Key": "Frequency",
-                    "Unit": "Hz"
-                  },
-                  {
-                    "Label": "Biên độ",
-                    "Key": "Amplitude",
-                    "Unit": "V"
-                  },
-                  {
-                    "Label": "Thd",
-                    "Key": "Thd",
-                    "Unit": "%"
-                  }
-                ]
-              },
-              {
-                "Label": "HdmiOut1",
-                "Key": "HdmiOut1",
-                "IsHasChild": true,
-                "DetailResults": [
-                  {
-                    "Label": "Diff",
-                    "Key": "DifferentPercent"
-                  },
-                  {
-                    "Label": "Size",
-                    "Key": "Size"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "required": [
-          "Id",
-          "TestingModuleStatus",
-          "TestingModule",
-          "TestingStep",
-          "Result",
-          "Progress",
-          "Name",
-          "TestingOptions",
-          "VideoOutputs",
-          "IsRetest",
-          "Order",
-          "IsEnable",
-          "DetailResults"
-        ],
-        "properties": {
-          "Id": {
-            "$id": "#/items/anyOf/1/properties/Id",
-            "type": "string",
-            "title": "The Id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "e5b690d4-cf67-4dee-a21d-8e97e3aa6f4e"
-            ]
-          },
-          "TestingModuleStatus": {
-            "$id": "#/items/anyOf/1/properties/TestingModuleStatus",
-            "type": "integer",
-            "title": "The TestingModuleStatus schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              2
-            ]
-          },
-          "TestingModule": {
-            "$id": "#/items/anyOf/1/properties/TestingModule",
-            "type": "string",
-            "title": "The TestingModule schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "HdmiCblSat"
-            ]
-          },
-          "TestingStep": {
-            "$id": "#/items/anyOf/1/properties/TestingStep",
-            "type": "integer",
-            "title": "The TestingStep schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              0
-            ]
-          },
-          "Result": {
-            "$id": "#/items/anyOf/1/properties/Result",
-            "type": "integer",
-            "title": "The Result schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              2
-            ]
-          },
-          "Progress": {
-            "$id": "#/items/anyOf/1/properties/Progress",
-            "type": "integer",
-            "title": "The Progress schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              0
-            ]
-          },
-          "Name": {
-            "$id": "#/items/anyOf/1/properties/Name",
-            "type": "string",
-            "title": "The Name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "HDMI-CBL/SAT"
-            ]
-          },
-          "TestingOptions": {
-            "$id": "#/items/anyOf/1/properties/TestingOptions",
-            "type": "array",
-            "title": "The TestingOptions schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-              [
-                "Audio",
-                "Video"
-              ]
-            ],
-            "additionalItems": true,
-            "items": {
-              "$id": "#/items/anyOf/1/properties/TestingOptions/items",
-              "anyOf": [
-                {
-                  "$id": "#/items/anyOf/1/properties/TestingOptions/items/anyOf/0",
-                  "type": "string",
-                  "title": "The first anyOf schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": "",
-                  "examples": [
-                    "Audio",
-                    "Video"
-                  ]
-                }
-              ]
-            }
-          },
-          "VideoOutputs": {
-            "$id": "#/items/anyOf/1/properties/VideoOutputs",
-            "type": "array",
-            "title": "The VideoOutputs schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-              [
-                "HdmiOut1"
-              ]
-            ],
-            "additionalItems": true,
-            "items": {
-              "$id": "#/items/anyOf/1/properties/VideoOutputs/items",
-              "anyOf": [
-                {
-                  "$id": "#/items/anyOf/1/properties/VideoOutputs/items/anyOf/0",
-                  "type": "string",
-                  "title": "The first anyOf schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": "",
-                  "examples": [
-                    "HdmiOut1"
-                  ]
-                }
-              ]
-            }
-          },
-          "IsRetest": {
-            "$id": "#/items/anyOf/1/properties/IsRetest",
-            "type": "boolean",
-            "title": "The IsRetest schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-              false
-            ]
-          },
-          "Order": {
-            "$id": "#/items/anyOf/1/properties/Order",
-            "type": "integer",
-            "title": "The Order schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-              1
-            ]
-          },
-          "IsEnable": {
-            "$id": "#/items/anyOf/1/properties/IsEnable",
-            "type": "boolean",
-            "title": "The IsEnable schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-              true
-            ]
-          },
-          "DetailResults": {
-            "$id": "#/items/anyOf/1/properties/DetailResults",
-            "type": "array",
-            "title": "The DetailResults schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-              [
-                {
-                  "Label": "Front-Left",
-                  "Key": "FrontLeft",
-                  "IsHasChild": true,
-                  "DetailResults": [
-                    {
-                      "Label": "Tần số",
-                      "Key": "Frequency",
-                      "Unit": "Hz"
-                    },
-                    {
-                      "Label": "Biên độ",
-                      "Key": "Amplitude",
-                      "Unit": "V"
-                    },
-                    {
-                      "Label": "Thd",
-                      "Key": "Thd",
-                      "Unit": "%"
-                    }
-                  ]
-                },
-                {
-                  "Label": "Front-Right",
-                  "Key": "FrontRight",
-                  "IsHasChild": true,
-                  "DetailResults": [
-                    {
-                      "Label": "Tần số",
-                      "Key": "Frequency",
-                      "Unit": "Hz"
-                    },
-                    {
-                      "Label": "Biên độ",
-                      "Key": "Amplitude",
-                      "Unit": "V"
-                    },
-                    {
-                      "Label": "Thd",
-                      "Key": "Thd",
-                      "Unit": "%"
-                    }
-                  ]
-                }
-              ]
-            ],
-            "additionalItems": true,
-            "items": {
-              "$id": "#/items/anyOf/1/properties/DetailResults/items",
-              "anyOf": [
-                {
-                  "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0",
-                  "type": "object",
-                  "title": "The first anyOf schema",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": {},
-                  "examples": [
-                    {
-                      "Label": "Front-Left",
-                      "Key": "FrontLeft",
-                      "IsHasChild": true,
-                      "DetailResults": [
-                        {
-                          "Label": "Tần số",
-                          "Key": "Frequency",
-                          "Unit": "Hz"
-                        },
-                        {
-                          "Label": "Biên độ",
-                          "Key": "Amplitude",
-                          "Unit": "V"
-                        },
-                        {
-                          "Label": "Thd",
-                          "Key": "Thd",
-                          "Unit": "%"
-                        }
-                      ]
-                    }
-                  ],
-                  "required": [
-                    "Label",
-                    "Key",
-                    "IsHasChild",
-                    "DetailResults"
-                  ],
-                  "properties": {
-                    "Label": {
-                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/Label",
-                      "type": "string",
-                      "title": "The Label schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "",
-                      "examples": [
-                        "Front-Left"
-                      ]
-                    },
-                    "Key": {
-                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/Key",
-                      "type": "string",
-                      "title": "The Key schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "",
-                      "examples": [
-                        "FrontLeft"
-                      ]
-                    },
-                    "IsHasChild": {
-                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/IsHasChild",
-                      "type": "boolean",
-                      "title": "The IsHasChild schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": false,
-                      "examples": [
-                        true
-                      ]
-                    },
-                    "DetailResults": {
-                      "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults",
-                      "type": "array",
-                      "title": "The DetailResults schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": [],
-                      "examples": [
-                        [
-                          {
-                            "Label": "Tần số",
-                            "Key": "Frequency",
-                            "Unit": "Hz"
-                          },
-                          {
-                            "Label": "Biên độ",
-                            "Key": "Amplitude",
-                            "Unit": "V"
-                          }
-                        ]
-                      ],
-                      "additionalItems": true,
-                      "items": {
-                        "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items",
-                        "anyOf": [
-                          {
-                            "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0",
-                            "type": "object",
-                            "title": "The first anyOf schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": {},
-                            "examples": [
-                              {
-                                "Label": "Tần số",
-                                "Key": "Frequency",
-                                "Unit": "Hz"
-                              }
-                            ],
-                            "required": [
-                              "Label",
-                              "Key",
-                              "Unit"
-                            ],
-                            "properties": {
-                              "Label": {
-                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Label",
-                                "type": "string",
-                                "title": "The Label schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Tần số"
-                                ]
-                              },
-                              "Key": {
-                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Key",
-                                "type": "string",
-                                "title": "The Key schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Frequency"
-                                ]
-                              },
-                              "Unit": {
-                                "$id": "#/items/anyOf/1/properties/DetailResults/items/anyOf/0/properties/DetailResults/items/anyOf/0/properties/Unit",
-                                "type": "string",
-                                "title": "The Unit schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                  "Hz"
-                                ]
-                              }
-                            },
-                            "additionalProperties": true
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              ]
-            }
-          }
+        "Elapsed": {
+          "type": "string",
+          "format": "time-span"
         },
-        "additionalProperties": true
+        "ElapsedMilliseconds": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "ElapsedTicks": {
+          "type": "integer",
+          "format": "int64"
+        }
       }
-    ]
-  }
+    },
+    "CardModuleStatusDetail": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BindableBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Label": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Key": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Value": {
+              "oneOf": [
+                {},
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "Unit": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Result": {
+              "$ref": "#/definitions/Result"
+            },
+            "IsViewDetail": {
+              "type": "boolean"
+            },
+            "IsHasChild": {
+              "type": "boolean"
+            },
+            "IsUpdated": {
+              "type": "boolean"
+            },
+            "DetailResults": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "$ref": "#/definitions/CardModuleStatusDetail"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "BindableBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/BindableBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "TestingModuleStatus": {
+          "$ref": "#/definitions/TestingStatus"
+        },
+        "TestingModule": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Result": {
+          "$ref": "#/definitions/Result"
+        },
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Step": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "IsRetest": {
+          "type": "boolean"
+        },
+        "Order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsEnable": {
+          "type": "boolean"
+        },
+        "Service": {
+          "oneOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ServiceName": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Duration": {
+          "type": "number",
+          "format": "double"
+        },
+        "IsExpander": {
+          "type": "boolean"
+        },
+        "VideoOutputs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "TestingOptions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/TestingOption"
+          }
+        },
+        "Stopwatch": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Stopwatch"
+            }
+          ]
+        },
+        "DetailResults": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/CardModuleStatusDetail"
+          }
+        }
+      }
+    }
+  ]
 }
